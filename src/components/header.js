@@ -1,33 +1,34 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Menu from "./menu"
+import './header.css'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, children }) => (
   <header
-    style={{
-      background: `#333`,
-      marginBottom: `0`,
-    }}
+    id="showcase"
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+
+    <div className="navbartop">
+
+
+      <div className="flex-row">      
+        <h2 className="nav__initial white">F</h2>
+        <h2 className="nav__initial orange">.</h2>
+      </div>
+      
+      <div className="navbartop__menu">
+        <Menu />
+      </div>
+     
     </div>
+
+    <div className="layout__content_container"
+      >
+        <main>{children}</main>
+      </div>
+
+
   </header>
 )
 

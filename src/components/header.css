@@ -1,0 +1,73 @@
+#showcase {
+    background-image: url('../images/woman.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#showcase h1 {
+    font-size: 90px;
+    color: white;
+    line-height: 0.7;
+}
+
+#showcase p {
+    font-size: 20px;
+    font-family: Arial, Helvetica;
+}
+
+#showcase a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border: 0.5px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: .3s;
+    font-family: Arial, Helvetica;
+}
+
+
+#showcase a:hover {
+    background: red;
+}
+
+.navbartop {
+    color: white;
+    font-size: 5vh;
+    position: fixed;
+    top: 0;
+    font-family: Arial, Helvetica;
+    background: black;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.nav__initial {
+    font-size: 5vh;
+    font-weight: bold;
+    margin: 0;
+}
+
+.layout__content_container {
+    position: absolute;
+    top: 152px;
+    margin: 0px auto;
+    max-width: 960px;
+    max-width: 96%;
+    min-width: 96%;
+
+}

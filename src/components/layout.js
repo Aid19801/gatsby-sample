@@ -22,8 +22,6 @@ const Layout = ({ children }) => {
       <Header
         siteTitle={data.site.siteMetadata.title}
       />
-      
-      <Menu />
 
       <div
         style={{

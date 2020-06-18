@@ -1,3 +1,6 @@
+* {
+  /* border: 1px solid red; */
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -653,6 +656,34 @@ code:before, code:after, tt:before, tt:after {
 
 pre code:before, pre code:after, pre tt:before, pre tt:after {
   content: "";
+}
+
+.black {
+  color: black !important;
+}
+
+.grey {
+  color: grey !important;
+}
+.orange {
+  color: orange !important;
+}
+.white {
+  color: white !important;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  margin: 0;
 }
 
 @media only screen and (max-width: 480px) {
