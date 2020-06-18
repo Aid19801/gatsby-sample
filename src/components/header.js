@@ -3,33 +3,36 @@ import PropTypes from "prop-types"
 import React from "react"
 import Menu from "./menu"
 import './header.css'
+import './layout.css'
 
 const Header = ({ siteTitle, children }) => (
-  <header
-    id="showcase"
-  >
+  <React.Fragment>
+    <header
+      id="showcase"
+    >
 
-    <div className="navbartop">
+      <div className="navbartop">
 
+        <div className="flex-row">
+          <h2 className="nav__initial white">F</h2>
+          <h2 className="nav__initial orange">.</h2>
+        </div>
 
-      <div className="flex-row">      
-        <h2 className="nav__initial white">F</h2>
-        <h2 className="nav__initial orange">.</h2>
+        <div className="navbartop__menu">
+          <Menu />
+        </div>
+
       </div>
-      
-      <div className="navbartop__menu">
-        <Menu />
-      </div>
-     
-    </div>
 
-    <div className="layout__content_container"
+      <div className="layout__content_container"
       >
         <main>{children}</main>
       </div>
 
+      
+    </header>
 
-  </header>
+  </React.Fragment>
 )
 
 Header.propTypes = {
