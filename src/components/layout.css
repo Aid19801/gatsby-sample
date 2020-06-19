@@ -1,6 +1,7 @@
 * {
   /* border: 1px solid red; */
 }
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -232,6 +233,8 @@ img {
 }
 
 h1 {
+  color: white;
+  font-size: 11vh;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -240,11 +243,9 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
   line-height: 1.1;
 }
 
@@ -393,6 +394,9 @@ dd {
 }
 
 p {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: bold;
+  color: white;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -665,9 +669,11 @@ pre code:before, pre code:after, pre tt:before, pre tt:after {
 .grey {
   color: grey !important;
 }
+
 .orange {
   color: orange !important;
 }
+
 .white {
   color: white !important;
 }
@@ -684,6 +690,70 @@ pre code:before, pre code:after, pre tt:before, pre tt:after {
 
 ul {
   margin: 0;
+}
+
+.homepage__title__container {
+  position: absolute;
+  /* border: 1px solid red; */
+  height: 75%;
+  width: 100%;
+  top: 16%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.homepage__title__container h1 {
+  opacity: 0;
+  color: white;
+  font-size: 13vh;
+}
+
+.not__homepage__container {
+  position: absolute;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  top: 16%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.not__homepage__container p {
+  text-align: start;
+  padding-left: 5px;
+  padding-right: 5px;
+  /* width: 50%; */
+  font-size: 25px;
+  /* background: rgba(0, 0, 0, 0.6); */
+  border-radius: 65px;
+  margin-bottom: 0;
+}
+
+.rounded {
+  border-radius: 40px;
+}
+
+.not__homepage__container .p__container {
+  width: 65%;
+}
+
+@media only screen and (max-width: 900px) {
+  .not__homepage__container .p__container {
+    width: 90%;
+  }
+  .not__homepage__container p {
+    width: 90%;
+    line-height: 1.1;
+  }
 }
 
 @media only screen and (max-width: 480px) {

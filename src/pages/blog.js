@@ -1,12 +1,12 @@
 import React from "react"
 import Link from 'gatsby-link';
-import Header from '../components/header';
+import Layout from '../components/layout';
 
 import SEO from "../components/seo"
 // import graphql from 'graphql';
 
 const BlogPage = ({ data }) => (
-    <Header>
+    <Layout>
         <SEO title="Home" />
         <h1>Latest Posts</h1>
 
@@ -23,7 +23,7 @@ const BlogPage = ({ data }) => (
             </div>
         ))}
 
-    </Header>
+    </Layout>
 );
 
 export const pageQuery = graphql`
