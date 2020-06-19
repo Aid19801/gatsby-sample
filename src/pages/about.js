@@ -32,7 +32,7 @@ function AboutPage() {
                 <div className="p__container opac-bg rounded">
                     <p className="white">
                     Funk-27 was born from years of experience in high profile, household name clients.
-                    Our developers have worked with an array of diverse, household names from
+                    Our developers have worked with an array of diverse businesses from
                     Sky to Reuters to leading names across the start-up & scale-up landscape.</p>
                     <br />
                     <p className="white">
