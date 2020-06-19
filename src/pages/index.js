@@ -9,7 +9,6 @@ const IndexPage = () => {
   let divSpanLineRef = useRef(null);
 
   useEffect(() => {
-    // TweenMax.to(titleRef, .5, { opacity: 1, x: 0, ease: Power3.easeInOut, delay: 1.5 });
     TweenMax.fromTo(titleRef, .4, { opacity: 0, y: 30 }, { opacity: 1, y: 0, ease: Power3.easeIn, delay: .5 });
   }, []);
 
@@ -36,3 +35,4 @@ const IndexPage = () => {
 
 
 export default IndexPage
+ 
