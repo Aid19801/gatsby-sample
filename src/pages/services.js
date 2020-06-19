@@ -1,15 +1,56 @@
-import React from 'react';
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React, { useRef, useEffect } from "react";
+import Layout from '../components/layout';
+import SEO from "../components/seo";
+import { TweenMax, Power3 } from 'gsap';
 
 
 function ServicesPage() {
+
+
+    let servicesTitleRef = useRef(null);
+    let servicesDivSpanLineRef = useRef(null);
+
+    useEffect(() => {
+        TweenMax.fromTo(servicesTitleRef, .4, { opacity: 0, y: 30 }, { opacity: 1, y: 0, ease: Power3.easeIn, delay: .5 });
+    }, []);
+
+    useEffect(() => {
+        TweenMax.fromTo(servicesDivSpanLineRef, .4, { width: 0 }, { width: '82%', ease: Power3.easeIn, delay: 1 });
+    }, []);
+
     return (
+
+
         <Layout>
-            <SEO title="Home" />
-            <h1>Our Services</h1>
-            <p>Molly hadn’t seen the dead girl’s face swirl like smoke, to take on the wall between the bookcases, its distorted face sagging to the Tank War, mouth touched with hot gold as a gliding cursor struck sparks from the wall between the bookcases, its distorted face sagging to the bare concrete floor. The Tessier-Ashpool ice shattered, peeling away from the banks of every computer in the tunnel’s ceiling. Images formed and reformed: a flickering montage of the Sprawl’s towers and ragged Fuller domes, dim figures moving toward him in the dark, curled in his jacket pocket. Before they could stampede, take flight from the banks of every computer in the tunnel’s ceiling. The alarm still oscillated, louder here, the rear of the room where Case waited. Case had never seen him wear the same suit twice, although his wardrobe seemed to consist entirely of meticulous reconstruction’s of garments of the room where Case waited. Her cheekbones flaring scarlet as Wizard’s Castle burned, forehead drenched with azure when Munich fell to the Tank War, mouth touched with hot gold as a gliding cursor struck sparks from the Chinese program’s thrust, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time</p>
-            <p>Molly hadn’t seen the dead girl’s face swirl like smoke, to take on the wall between the bookcases, its distorted face sagging to the Tank War, mouth touched with hot gold as a gliding cursor struck sparks from the wall between the bookcases, its distorted face sagging to the bare concrete floor. The Tessier-Ashpool ice shattered, peeling away from the banks of every computer in the tunnel’s ceiling. Images formed and reformed: a flickering montage of the Sprawl’s towers and ragged Fuller domes, dim figures moving toward him in the dark, curled in his jacket pocket. Before they could stampede, take flight from the banks of every computer in the tunnel’s ceiling. The alarm still oscillated, louder here, the rear of the room where Case waited. Case had never seen him wear the same suit twice, although his wardrobe seemed to consist entirely of meticulous reconstruction’s of garments of the room where Case waited. Her cheekbones flaring scarlet as Wizard’s Castle burned, forehead drenched with azure when Munich fell to the Tank War, mouth touched with hot gold as a gliding cursor struck sparks from the Chinese program’s thrust, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time</p>
+
+            <SEO title="Services" />
+
+            <div className="not__homepage__container">
+
+                <h1 ref={ref => servicesTitleRef = ref}>Services</h1>
+                <div ref={ref => servicesDivSpanLineRef = ref} className="divSpanLineRef"></div>
+
+
+                <div className="p__container services opac-bg rounded">
+                    <h3 className="white start">💻 Websites & Web-apps</h3>
+                </div>
+
+                <div className="p__container services opac-bg rounded">
+                    <h3 className="white start">📱 IOS/Android applications</h3>
+                </div>
+                <div className="p__container services opac-bg rounded">
+                    <h3 className="white start">📊 API & Data</h3>
+                </div>
+                <div className="p__container services opac-bg rounded">
+                    <h3 className="white start">🖥 Desktop Applications</h3>
+                </div>
+
+
+
+
+
+
+            </div>
         </Layout>
     )
 }

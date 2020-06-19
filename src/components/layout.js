@@ -14,7 +14,7 @@ const Layout = ({ siteTitle, children }) => (
 
         <div className="flex-row">
           <h2 className="nav__initial white">F</h2>
-          <h2 className="nav__initial orange">.</h2>
+          <h2 className="nav__initial orange">27</h2>
         </div>
 
         <div className="navbartop__menu">
