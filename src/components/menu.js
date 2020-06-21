@@ -4,7 +4,7 @@ import './menu.css';
 
 const Menu = () => (
     <div className="menu__container" style={{ paddingTop: '10px'}}>
-        <ul style={{ listStyle: 'none', display: 'flex', justifyContent: 'space-evenly', margin: 0 }}>
+        <ul style={{ listStyle: 'none', display: 'flex', justifyContent: 'space-between', margin: 0 }}>
             <li>
                 <Link to="/">Home</Link>
             </li>

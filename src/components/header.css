@@ -53,7 +53,7 @@
     background: orange;
 }
 
-.navbartop {
+.nav__container {
     color: white;
     font-size: 5vh;
     position: fixed;
