@@ -10,7 +10,7 @@ const Layout = ({ siteTitle, children }) => {
 
   let fadeOutAsYouScrollRef = useRef(null);
   const [title, setTitle] = useState('');
-  let servicesDivSpanLineRef = useRef(null);
+  // let servicesDivSpanLineRef = useRef(null);
 
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const Layout = ({ siteTitle, children }) => {
   }
 
   useEffect(() => {
-    TweenMax.fromTo(servicesDivSpanLineRef, .4, { width: 0 }, { width: '82%', ease: Power3.easeIn, delay: .7 });
+    // TweenMax.fromTo(servicesDivSpanLineRef, .4, { width: 0 }, { width: '82%', ease: Power3.easeIn, delay: .7 });
   }, []);
 
   return (
@@ -56,24 +56,6 @@ const Layout = ({ siteTitle, children }) => {
         </div>
 
       </div>
-
-
-      <div
-        className="header"
-      >
-        <div ref={fadeOutAsYouScrollRef} id="bg">
-          <div className="flex-center flex-col h-100">
-            <h1 className="main-title">{title ? title : 'Funk-27'}</h1>
-            <div ref={ref => servicesDivSpanLineRef = ref} className="divSpanLineRef"></div>
-          </div>
-        </div>
-
-
-      </div>
-
-      <section>
-        {children}
-      </section>
 
     </React.Fragment>
   )

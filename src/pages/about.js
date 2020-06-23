@@ -1,54 +1,61 @@
-import React, { useRef, useEffect } from "react";
-import Layout from '../components/layout';
+import React, { useRef, useEffect, useState } from "react"
+import withLayout from '../components/layout1';
 import SEO from "../components/seo";
 import { TweenMax, Power3 } from 'gsap';
 
+const AboutPage = () => {
 
-function AboutPage() {
+  const [title, setTitle] = useState('');
+  let aboutLineRef = useRef(null);
 
-
-  let servicesTitleRef = useRef(null);
-  let servicesDivSpanLineRef = useRef(null);
-  let firstPara = useRef(null);
-  let secondPara = useRef(null);
-
-  useEffect(() => {
-    TweenMax.fromTo(servicesTitleRef, .4, { opacity: 0, y: 30 }, { opacity: 1, y: 0, ease: Power3.easeIn, delay: .5 });
-  }, []);
+  const takeTitleFromURLtrimSlashes = () => {
+    const str = window.location.pathname.replace(/\//g, "");
+    setTitle(str);
+  }
 
   useEffect(() => {
-    TweenMax.fromTo(servicesDivSpanLineRef, .4, { width: 0 }, { width: '82%', ease: Power3.easeIn, delay: 1 });
-    TweenMax.fromTo(firstPara, .4, { opacity: 0, y: 30 }, { opacity: 1, y: 0, ease: Power3.easeIn, delay: .5 });
-    TweenMax.fromTo(secondPara, .4, { opacity: 0, y: 30 }, { opacity: 1, y: 0, ease: Power3.easeIn, delay: .5 });
+    takeTitleFromURLtrimSlashes();
+    TweenMax.fromTo(aboutLineRef, .4, { width: 0 }, { width: '82%', ease: Power3.easeIn, delay: .7 });
   }, []);
-
+  
   return (
 
+    <React.Fragment>
+    
+    <SEO title="About" />
 
-    <Layout>
-
-      <SEO title="Services" />
-
-      <div className="not__homepage__container about">
-        <h1 ref={ref => servicesTitleRef = ref}>About</h1>
-        <div ref={ref => servicesDivSpanLineRef = ref} className="divSpanLineRef"></div>
-
-        <div className="p__container opac-bg rounded">
-          <p ref={ref => firstPara = ref} className="white">
-            Funk-27 was born from years of experience in high profile, household name clients.
-            Our developers have worked with an array of diverse businesses from
-                    Sky to Reuters to leading names across the start-up & scale-up landscape.</p>
-          <br />
-          
-          <div className="flex-row w-100 orange-dots-container">
-
-          <p ref={ref => secondPara = ref} className="white">
-            We strive to ensure each project is an agile, communications-lead, engaging client experience.</p>
-          </div>
+    <div className="header poo">
+      <div id="bg">
+        <div className="flex-center flex-col h-100">
+          <h1 className="main-title">{title ? title : 'Funk-27'}</h1>
+          <div ref={ref => aboutLineRef = ref} className="divSpanLineRef"></div>
         </div>
-
       </div>
-    </Layout>
-  )
+    </div>
+
+
+    <section>
+      <h2 className="section__title">ABOUT ABOUT ABOUT</h2>
+      <p className="section__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet ultricies ligula. Phasellus eget elit aliquet nibh rutrum condimentum. Suspendisse accumsan elit in augue volutpat, sed pellentesque felis elementum. Praesent tristique nibh sapien, vel luctus ante laoreet vel. Aenean laoreet, neque ultricies faucibus vulputate, nulla turpis maximus est, vitae ullamcorper mauris purus id ipsum. Pellentesque finibus molestie diam, id suscipit enim convallis in. Praesent vitae odio quis nibh blandit suscipit id in augue. Quisque volutpat sed erat eget finibus. Fusce a maximus elit.
+
+      Nullam a orci ex. Nam condimentum sed velit a imperdiet. Morbi tempor purus mi, et scelerisque nunc rhoncus in. Curabitur sit amet ligula hendrerit, accumsan turpis vitae, tincidunt risus. Mauris consequat eu est sit amet condimentum. Aenean commodo posuere condimentum. Sed lobortis elementum mauris, eget mollis nisi efficitur non. Suspendisse malesuada nisl a elit ultrices gravida. Sed malesuada risus eu rutrum aliquet. Fusce quis sapien nec lacus tempor tristique.
+      
+      Pellentesque ac lacinia erat. Morbi egestas suscipit sem nec cursus. Etiam sollicitudin id eros et elementum. Nunc varius pellentesque nisl. Duis ullamcorper tellus elit, ac mattis ante venenatis ut. Praesent auctor leo et nulla convallis consequat. Aenean imperdiet elementum ex id pretium. Maecenas justo ante, aliquam vel tellus eget, egestas hendrerit massa.
+      
+      Nunc feugiat metus ac faucibus euismod. Etiam malesuada massa condimentum pellentesque varius. Suspendisse nec faucibus libero. Proin dignissim consectetur sapien, vitae ornare neque congue nec. Phasellus eu dui tristique, rhoncus ipsum at, aliquet ante. Duis imperdiet, lacus in vestibulum dictum, mauris sapien facilisis justo, a congue tortor augue sit amet massa. Cras consequat, sapien fermentum semper vestibulum, ex turpis mollis velit, ut pretium ante odio sit amet lacus. Proin quis facilisis metus, et faucibus diam. Ut vulputate consectetur ante nec dapibus. Etiam sit amet finibus quam, eget semper magna. Nam non neque vulputate ante finibus placerat eget fermentum purus. Pellentesque tristique cursus ornare. Fusce ac neque id risus ornare porta. Praesent ut faucibus libero. Fusce consequat at neque ac sollicitudin.</p>
+
+    
+    </section>
+   
+    </React.Fragment>
+
+
+      
+
+  );
+
 }
-export default AboutPage
+
+
+export default withLayout(AboutPage)
+ 
