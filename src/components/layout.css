@@ -86,15 +86,35 @@ body {
   background: rgba(0, 0, 0, 0,5);
 }
 
+.rounded {
+  border-radius: 50%;
+}
+
 section {
   padding: 15px;
   color: #fff;
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: -100px;
+  margin-top: -2px;
   background: black;
-  box-shadow: 5px 25px 25px 75px black;
+  box-shadow: 5px 25px 25px 75px orange;
+}
+
+section.home__boxes__container {
+  width: 100%;
+  /* border: 1px solid red; */
+  height: auto;
+  background: orange;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+section.home__boxes__container h1 {
+  color: purple;
+  font-weight: bold;
+  font-size: 12vh;
 }
 
 section h2 {
