@@ -7,6 +7,10 @@ import './layout.css'
 const withLayout = MyComponent => {
 
     return class extends React.Component {
+
+        constructor() {
+            super();
+        }
         
         render() {
 

@@ -1,3 +1,7 @@
+.menu__container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 .menu__container a {
     border: 0 !important;
     margin: 0;
@@ -6,8 +10,16 @@
 
     font-size: 20px;
 
-    font-family: Arial;
+    font-family: 'Raleway', Arial;
+    font-weight: bold;
     text-decoration: none;
+}
+
+.nav__container {
+    position: fixed;
+    opacity: 1;
+    width: 100%;
+    z-index: 1;
 }
 
 .nav__container .nav__initial {

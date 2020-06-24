@@ -1,4 +1,5 @@
 import React from 'react';
+import withLayout from '../components/layout1';
 import './page.css';
 
 function Services() {
@@ -79,4 +80,4 @@ function Services() {
     );
 }
 
-export default Services;
+export default withLayout(Services);

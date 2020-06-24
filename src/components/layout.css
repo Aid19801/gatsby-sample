@@ -65,6 +65,13 @@
   justify-content: center;
   font-family: Arial;
 }
+.nav__menu__container, .nav__container {
+  background-color: black;
+}
+
+.nav__container > .flex-row {
+  margin-left: 15px;
+}
 
 @media only screen and (max-width: 900px) {
 
