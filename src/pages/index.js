@@ -12,18 +12,6 @@ const IndexPage = () => {
   const [title, setTitle] = useState('');
   let homeLineRef = useRef(null);
 
-//   let firstBox = useRef(null);
-//   let secondBox = useRef(null);
-//   let thirdBox = useRef(null);
-//   let fourthBox = useRef(null);
-
-//   useEffect(() => {
-//     TweenMax.fromTo(firstBox, .4, { opacity: 0, y: 30 }, { opacity: 1, y: 0, ease: Power3.easeIn, delay: .5 });
-//     TweenMax.fromTo(secondBox, .4, { opacity: 0, y: 30 }, { opacity: 1, y: 0, ease: Power3.easeIn, delay: .6 });
-//     TweenMax.fromTo(thirdBox, .4, { opacity: 0, y: 30 }, { opacity: 1, y: 0, ease: Power3.easeIn, delay: .7 });
-//     TweenMax.fromTo(fourthBox, .4, { opacity: 0, y: 30 }, { opacity: 1, y: 0, ease: Power3.easeIn, delay: .8 });
-// }, []);
-
   useEffect(() => {
     takeTitleFromURLtrimSlashes();
   }, [])
@@ -42,9 +30,6 @@ const IndexPage = () => {
     <React.Fragment>
     
     <SEO title="Home" />
-
-    
-    
       
       <div className="header plop">
         <div id="bg">
