@@ -86,12 +86,28 @@ body {
   background-color: transparent;
 }
 
+.client-imgs-container {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.client-img {
+  height: 120px;
+  width: auto;
+  max-width: 320px;
+  filter: grayscale(1);
+  margin-right: 15px;
+}
+
 @media only screen and (max-width: 568px) {
   .pimg1, .pimg2, .pimg3 {
     background-attachment: scroll;
   }
   .ptext {
     top: 44%;
+  }
+
+  .section > h2 {
+    margin-bottom: 30px;
   }
 }
 
