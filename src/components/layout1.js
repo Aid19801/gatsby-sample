@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import Menu from "./menu"
+import Footer from './footer';
 import './header.css'
 import './layout.css'
 
@@ -31,6 +32,7 @@ const withLayout = MyComponent => {
                     <MyComponent {...this.props} />
 
 
+                    <Footer />
                 </React.Fragment>
             )
         }

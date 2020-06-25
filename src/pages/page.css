@@ -39,6 +39,10 @@ body {
   height: 100vh;
 }
 
+.pimg1.extra-height {
+  height: 110vh;
+}
+
 .pimg2 {
   background-image: url('../images/office_startup.jpg');
   min-height: 400px;
