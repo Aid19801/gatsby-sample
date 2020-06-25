@@ -68,6 +68,10 @@ body {
   color: #666;
 }
 
+.section .client-projects p {
+  color: #666;
+}
+
 .ptext {
   position: absolute;
   top: 50%;

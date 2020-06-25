@@ -10,12 +10,12 @@
 
 .eachSVG__description__container {
     position: relative;
-    height: 300px;
-    width: 300px;
-    max-height: 300px;
-    min-height: 300px;
-    min-width: 300px;
-    max-width: 300px;
+    height: 250px;
+    width: 250px;
+    max-height: 250px;
+    min-height: 250px;
+    min-width: 250px;
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,6 +29,7 @@
     bottom: 10px;
     background: black;
     padding: 10px 20px;
+    font-size: 88%;
 }
 .svg__container {
     height: 100%;
@@ -38,6 +39,12 @@
 .svg__container svg {
     height: 100%;
     width: 100%;
+    filter: grayscale(60%);
+    transition: .3s;
+}
+
+.svg__container svg:hover {
+    filter: grayscale(0);
 }
 
 @media screen and (max-width: 1233px) {
@@ -60,12 +67,12 @@
         align-items: center;
     }
     .eachSVG__description__container {
-        height: 300px;
-        width: 300px;
-        max-height: 300px;
-        min-height: 300px;
-        min-width: 300px;
-        max-width: 300px;
+        height: 250px;
+        width: 250px;
+        max-height: 250px;
+        min-height: 250px;
+        min-width: 250px;
+        max-width: 250px;
         margin-bottom: 30px;
     }
 }
