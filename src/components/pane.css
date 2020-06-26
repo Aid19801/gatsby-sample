@@ -4,6 +4,8 @@
     position: absolute;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     top: 20%;
 }
 
@@ -12,12 +14,22 @@
     padding: 50px 80px;
     background: #ddd;
 }
+
+.pane__content__container.desktop__only {
+    margin-top: 40px;
+}
 .pane__container h1 {
     color: #282e34;
 }
 
 .pane__container p {
     color: #666;
+}
+
+@media only screen and (max-width: 885px) {
+    .pane__content__container.desktop__only {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 568px) {

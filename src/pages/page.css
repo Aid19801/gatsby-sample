@@ -75,13 +75,25 @@ body {
 .ptext {
   position: absolute;
   top: 50%;
-  /* left: 50%; */
-  width: 100%;
+  left: 38%;
+  width: 26%;
   text-align: center;
   color: #000;
   font-size: 27px;
   letter-spacing: 8px;
   text-transform: uppercase;
+}
+
+.pimg2 .ptext {
+  top: 33%;
+}
+
+.pimg3 .ptext {
+  top: 37%;
+}
+
+.ptext.dark-text {
+  color: black !important;
 }
 
 .ptext .border {
@@ -107,12 +119,24 @@ body {
   margin-right: 15px;
 }
 
+
+
 @media only screen and (max-width: 568px) {
   .pimg1, .pimg2, .pimg3 {
     background-attachment: scroll;
   }
   .ptext {
     top: 44%;
+    width: auto;
+    left: 20%;
+  }
+
+  .pimg2 .ptext {
+    left: -1%;
+  }
+
+  .pimg3 .ptext {
+    left: 5%;
   }
 
   .section {

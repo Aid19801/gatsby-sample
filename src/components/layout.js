@@ -44,7 +44,7 @@ const Layout = ({ siteTitle, children }) => {
   return (
     <React.Fragment>
 
-      <div className="nav__container">
+      <div className="nav__container" ref={fadeOutAsYouScrollRef}>
 
         <div className="flex-row">
           <h2 className="nav__initial white">F</h2>

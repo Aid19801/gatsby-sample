@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import withLayout from '../components/layout1';
+import { TweenMax, Power3 } from 'gsap';
 import './page.css';
 
 function Home() {
+
+    let spanRef = useRef(null);
+
+    useEffect(() => {
+        TweenMax.fromTo(spanRef, .4, { opacity: 0, y: 100 }, {  opacity: 1, y: 0, ease: Power3.easeIn, delay: .5 });
+    }, [])
+
     return (
         <React.Fragment>
             <div className="pimg1">
                 <div className="ptext">
-
-                    <span className="border">
-                            Funk-27
-                    </span>
+                    <h4 ref={ref => spanRef = ref} className="border">
+                        Funk-27
+                    </h4>
                 </div>
             </div>
             <section className="section section-light">
@@ -28,7 +35,7 @@ function Home() {
             <div className="pimg2">
                 <div className="ptext">
 
-                    <span className="border trans">
+                    <span className="border trans dark-text">
                         Bringing Your Ideas To Life
                     </span>
                 </div>

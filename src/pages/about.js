@@ -7,9 +7,10 @@ function About() {
   return (
     <React.Fragment>
       <div className="pimg1 extra-height">
-        <Pane />
+        
       </div>
 
+      <Pane />
 
     </React.Fragment>
   );
