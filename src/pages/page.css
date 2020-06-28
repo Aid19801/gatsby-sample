@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', Arial;
+  line-height: 1.8em;
+  font-weight: bold;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background: #000; */
+}
+
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url('../images/startup.jpg');
+  min-height: 100%;
+  height: 100vh;
+}
+
+.pimg1.extra-height {
+  height: 110vh;
+}
+
+.pimg2 {
+  background-image: url('../images/office_startup.jpg');
+  min-height: 400px;
+}
+
+.pimg3 {
+  background-image: url('../images/mob_desk.jpg');
+  min-height: 400px;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+.section .client-projects p {
+  color: #666;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  width: 26%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.pimg2 .ptext {
+  top: 33%;
+}
+
+.pimg3 .ptext {
+  top: 37%;
+}
+
+.ptext.dark-text {
+  color: black !important;
+}
+
+.ptext .border {
+  background-color: #111;
+  color: white;
+  padding: 20px
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+  padding: 0;
+}
+
+.client-imgs-container {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.client-img {
+  height: 120px;
+  width: auto;
+  max-width: 320px;
+  filter: grayscale(1);
+  margin-right: 15px;
+}
+
+
+
+@media only screen and (max-width: 568px) {
+  .pimg1, .pimg2, .pimg3 {
+    background-attachment: scroll;
+  }
+  .ptext {
+    top: 51%;
+    width: auto;
+    left: 26%;
+  }
+
+  .pimg2 .ptext {
+    left: 16%;
+    top: 42%;
+  }
+
+  .pimg3 .ptext {
+    left: 5%;
+  }
+
+  .bottomptext{
+    left: 31%;
+  }
+
+  .section {
+    padding: 10px 20px 20px;
+  }
+  
+  .section > h2 {
+    margin-bottom: 20px;
+  }
+  .section > p {
+    text-align: start;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ptext {
+    top: 47%;
+    width: auto;
+    left: 23%;
+  }
+}
