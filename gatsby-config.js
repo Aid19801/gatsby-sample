@@ -7,8 +7,8 @@ module.exports = {
     // defaultDescription: `Welcome to the future! Funk-27 is a Front End Design and Software Delivery agency based in the South East of England.`,
     author: `@funkTwentySeven`,
     twitterUsername: `@funkTwentySeven`,
-    url: `http://www.funk27.com`,
-    image: `/assets/foo.jpeg`,
+    url: `https://funk27.com`,
+    image: `/images/foo.jpeg`,
     titleTemplate: `F27`
   },
   plugins: [
