@@ -3,12 +3,12 @@ module.exports = {
     title: `Funk-27`,
     // defaultTitle: `F27`,
     titleTemplate: `F27`,
-    description: `Welcome to the future! Funk-27 is a Front End Design and Software Delivery agency based in the South East of England.`,
+    description: `GQL prop | Welcome to the future! Funk-27 is a Front End Design and Software Delivery agency based in the South East of England.`,
     // defaultDescription: `Welcome to the future! Funk-27 is a Front End Design and Software Delivery agency based in the South East of England.`,
     author: `@funkTwentySeven`,
     twitterUsername: `@funkTwentySeven`,
     url: `https://www.funk27.com`,
-    image: `/images/startup.jpg`,
+    image: `/assets/startup.jpg`,
     titleTemplate: ``
   },
   plugins: [

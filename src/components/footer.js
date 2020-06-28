@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './footer.css';
 
-function Footer({ ...props }) {
-
-const [ data, setData ] = useState([]);
-
-useEffect(() => {
-
-}, [])
+function Footer() {
 return (
      <div className="footer__container">
         <h3>© 2020 Funk-27</h3>

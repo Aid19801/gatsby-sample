@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { TweenMax, Power3 } from 'gsap';
 import './pane.css';
 

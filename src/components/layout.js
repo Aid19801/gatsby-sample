@@ -1,12 +1,10 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useRef, useEffect, useState } from "react"
 import Menu from "./menu"
-import { TweenMax, Power3 } from 'gsap';
 import './header.css'
 import './layout.css'
 
-const Layout = ({ siteTitle, children }) => {
+const Layout = () => {
 
   let fadeOutAsYouScrollRef = useRef(null);
   const [title, setTitle] = useState('');
@@ -35,6 +33,7 @@ const Layout = ({ siteTitle, children }) => {
   const takeTitleFromURLtrimSlashes = () => {
     const str = window.location.pathname.replace(/\//g, "");
     setTitle(str);
+    console.log('AT | title is now :', title);
   }
 
   useEffect(() => {

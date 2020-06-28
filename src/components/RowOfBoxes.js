@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Computer from '../assets/computer.svg';
 import Money from '../assets/money.svg';
 import Graph from '../assets/graph.svg';
