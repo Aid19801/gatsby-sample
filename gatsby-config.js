@@ -8,7 +8,7 @@ module.exports = {
     author: `@funkTwentySeven`,
     twitterUsername: `@funkTwentySeven`,
     url: `http://www.funk27.com`,
-    image: `/assets/startup.png`,
+    image: `/assets/foo.jpeg`,
     titleTemplate: `F27`
   },
   plugins: [

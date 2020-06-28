@@ -52,8 +52,6 @@ const SEO = ({ title, description, image, article }) => {
       {seo.image && <meta property="og:image" content={seo.image} />}
 
       {seo.image && <meta property="og:image:type" content="image/jpeg" />}
-      {seo.image && <meta property="og:image:width" content="1200" />}
-      {seo.image && <meta property="og:image:height" content="628" />}
       {seo.image && <meta property="og:image:alt" content="shiny technology with stripes" />}
 
       <meta name="twitter:card" content="summary_large_image" />
