@@ -33,15 +33,15 @@ const SEO = ({ title, description, image, article }) => {
 
   console.log('AT | seo looks like this :', seo);
   console.log('AT | site.siteMetadata looks like this :', site.siteMetadata);
-  
+
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
+      
+      <meta property="og:type" content="website" />
 
       {seo.url && <meta property="og:url" content={seo.url} />}
-
-      {(article ? true : null) && <meta property="og:type" content="article" />}
 
       {seo.title && <meta property="og:title" content={seo.title} />}
 
@@ -50,6 +50,11 @@ const SEO = ({ title, description, image, article }) => {
       )}
 
       {seo.image && <meta property="og:image" content={seo.image} />}
+
+      {seo.image && <meta property="og:image:type" content="image/jpeg" />}
+      {seo.image && <meta property="og:image:width" content="1200" />}
+      {seo.image && <meta property="og:image:height" content="628" />}
+      {seo.image && <meta property="og:image:alt" content="shiny technology with stripes" />}
 
       <meta name="twitter:card" content="summary_large_image" />
 
