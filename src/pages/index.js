@@ -15,7 +15,11 @@ function Home() {
     return (
         <React.Fragment>
 
-            <SEO title="Home" />
+            <SEO
+                title="Home"
+                description="Welcome to the future. Funk-27 is a Front End / UX & Software Engineering agency based in the South East of England. We specialise in Webapps, Websites, IOS/Android and Desktop Applications."
+                
+                />
             
             <div className="pimg1">
                 <div className="ptext">
