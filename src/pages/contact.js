@@ -7,8 +7,6 @@ function Contact() {
     return (
         <React.Fragment>
             
-
-
             <div className="pimg1">
                 <div className="ptext">
 
@@ -18,21 +16,17 @@ function Contact() {
                 </div>
             </div>
 
-
-
             <section className="section section-dark contact__page">
                 <h2>Get Funktional</h2>
                 <p>If you want help on your tech projects, get in touch today.</p>
                 <Socials />
             </section>
 
-
             <div className="pimg2">
                 <div className="ptext">
-
                     <span className="border">
                         Funk-27
-                </span>
+                    </span>
                 </div>
             </div>
         </React.Fragment>

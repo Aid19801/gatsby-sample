@@ -75,7 +75,7 @@ body {
 .ptext {
   position: absolute;
   top: 50%;
-  left: 38%;
+  left: 37%;
   width: 26%;
   text-align: center;
   color: #000;
@@ -126,17 +126,22 @@ body {
     background-attachment: scroll;
   }
   .ptext {
-    top: 44%;
+    top: 51%;
     width: auto;
-    left: 20%;
+    left: 26%;
   }
 
   .pimg2 .ptext {
-    left: -1%;
+    left: 16%;
+    top: 42%;
   }
 
   .pimg3 .ptext {
     left: 5%;
+  }
+
+  .bottomptext{
+    left: 31%;
   }
 
   .section {
@@ -152,5 +157,9 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-  
+  .ptext {
+    top: 47%;
+    width: auto;
+    left: 23%;
+  }
 }

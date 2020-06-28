@@ -70,7 +70,7 @@ function Services() {
 
 
             <div className="pimg1">
-                <div className="ptext">
+                <div className="ptext bottomptext">
 
                     <span className="border">
                         Funk-27
