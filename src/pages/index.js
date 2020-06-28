@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import withLayout from '../components/layout1';
+import SEO from "../components/seo"
 import { TweenMax, Power3 } from 'gsap';
 import './page.css';
 
@@ -13,6 +14,9 @@ function Home() {
 
     return (
         <React.Fragment>
+
+            <SEO title="Home" />
+            
             <div className="pimg1">
                 <div className="ptext">
                     <h4 ref={ref => spanRef = ref} className="border">

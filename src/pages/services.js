@@ -1,11 +1,15 @@
 import React from 'react';
 import withLayout from '../components/layout1';
 import RowOfBoxes from '../components/RowOfBoxes';
+import SEO from "../components/seo"
 import './page.css';
 
 function Services() {
     return (
         <React.Fragment>
+
+            <SEO title="Services" />
+
             <div className="pimg1">
                 <div className="ptext">
 

@@ -1,12 +1,15 @@
 import React from 'react';
 import withLayout from '../components/layout1';
-import Socials from '../components/Socials';
+import Socials from '../components/socials';
+import SEO from "../components/seo"
 import './page.css';
 
 function Contact() {
     return (
         <React.Fragment>
-            
+
+            <SEO title="Contact" />
+
             <div className="pimg1">
                 <div className="ptext">
 
