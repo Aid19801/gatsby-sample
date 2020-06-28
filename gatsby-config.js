@@ -1,8 +1,15 @@
 module.exports = {
   siteMetadata: {
     title: `Funk-27`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    // defaultTitle: `F27`,
+    titleTemplate: `F27`,
+    description: `Welcome to the future! Funk-27 is a Front End Design and Software Delivery agency based in the South East of England.`,
+    // defaultDescription: `Welcome to the future! Funk-27 is a Front End Design and Software Delivery agency based in the South East of England.`,
+    author: `@funkTwentySeven`,
+    twitterUsername: `@funkTwentySeven`,
+    url: `https://www.funk27.com`,
+    image: `/images/startup.jpg`,
+    titleTemplate: ``
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
