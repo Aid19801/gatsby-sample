@@ -15,7 +15,7 @@ function Home() {
     return (
         <React.Fragment>
 
-            <SEO image={require('../images/foo.jpeg')} />
+            <SEO />
             
             <div className="pimg1">
                 <div className="ptext">

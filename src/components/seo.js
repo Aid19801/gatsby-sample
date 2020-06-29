@@ -27,13 +27,13 @@ const SEO = ({ title, description, image, article }) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image,
-    // image: `${siteUrl}${image || defaultImage}`,
+    // image,
+    image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   }
 
-  console.log('AT | seo looks like this :', seo);
-  console.log('AT | site.siteMetadata looks like this :', site.siteMetadata);
+  console.log('AT | seo looks like this :', seo.image);
+  console.log('AT | prop image :', site.siteMetadata);
 
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
