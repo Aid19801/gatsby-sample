@@ -33,7 +33,8 @@ const SEO = ({ title, description, image, article }) => {
   }
 
   console.log('AT | seo looks like this :', seo.image);
-  console.log('AT | prop image :', site.siteMetadata);
+  console.log('AT | siteMetadata :', site.siteMetadata);
+  console.log('AT | prop image :', image);
 
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
@@ -97,6 +98,7 @@ const query = graphql`
         defaultDescription: description
         siteUrl: url
         twitterUsername
+        defaultImage: image
       }
     }
   }
