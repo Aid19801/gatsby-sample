@@ -32,14 +32,14 @@ const SEO = ({ title, description, image, article }) => {
     url: `${siteUrl}${pathname}`,
   }
 
-  console.log('AT | seo looks like this :', seo.image);
+  console.log('AT | seo looks like this :', seo);
   console.log('AT | siteMetadata :', site.siteMetadata);
   console.log('AT | prop image :', image);
 
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
       <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
+      <meta name="image" content={image} />
       
       <meta property="og:type" content="website" />
 
@@ -51,7 +51,7 @@ const SEO = ({ title, description, image, article }) => {
         <meta property="og:description" content={seo.description} />
       )}
 
-      {seo.image && <meta property="og:image" content={seo.image} />}
+      {seo.image && <meta property="og:image" content={image} />}
 
       {seo.image && <meta property="og:image:type" content="image/jpeg" />}
       {seo.image && <meta property="og:image:alt" content="shiny technology with stripes" />}
