@@ -10,11 +10,17 @@ function About() {
 
       <SEO title="About Us" />
 
-      <div className="pimg1 extra-height">
-        
+      <div class="wrapper">
+        <div className="pimg1 extra-height">
+          
+        </div>
+
+        <Pane />
+      
+      
       </div>
 
-      <Pane />
+
 
     </React.Fragment>
   );

@@ -27,6 +27,14 @@
     color: #666;
 }
 
+.wrapper {
+-webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  overflow-x: hidden !important;
+  height: 100vh;
+  width: 100vw;
+}
+
 @media only screen and (max-width: 885px) {
     .pane__content__container.desktop__only {
         display: none;
