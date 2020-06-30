@@ -23,3 +23,14 @@
     color: white;
     font-size: 7px;
 }
+
+
+@media only screen and (max-width: 568px) {
+    .footer__container {
+        position: inherit;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+
+}
