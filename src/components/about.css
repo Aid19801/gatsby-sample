@@ -1,11 +1,20 @@
 .about__page {
     background: linear-gradient(to top, beige, white);
-    height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 150px;
+    flex-direction: column;
 }
 
 .about__page > h1 {
     color: black;
+    width: 90%;
+}
+.about__page > p {
+    color: grey;
+    width: 90%;
 }
