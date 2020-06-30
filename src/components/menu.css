@@ -36,3 +36,12 @@
         margin-bottom: -31px;
     }
 }
+
+@media only screen and (max-width: 490px) {
+    .nav__container .nav__initial {
+        font-size: 5vh;
+    }
+    .nav__container > .flex-row {
+        margin-bottom: -16px;
+    }
+}
