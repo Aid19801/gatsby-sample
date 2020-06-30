@@ -12,11 +12,13 @@ const withLayout = MyComponent => {
         constructor() {
             super();
             this.navRef = React.createRef();
-            this.isHome = window.location.pathname === '/';
+            this.state = {
+                isHome: true,
+            }
         }
 
         componentDidMount() {
-            // const isHome = window.location.pathname === '/';
+            this.setState({ isHome: window.location.pathname === '/' });
 
             if (this.isHome) {
                 TweenMax.fromTo(this.navRef, .4, { opacity: 0, y: -150 }, { opacity: 1, y: 0, ease: Power3.easeIn, delay: .5 });
@@ -27,7 +29,7 @@ const withLayout = MyComponent => {
 
             return (
                 <React.Fragment>
-                    <div className={this.isHome ? `nav__container fade-in-pre-styling` : `nav__container`} ref={ref => this.navRef = ref}>
+                    <div className={this.state.isHome ? `nav__container fade-in-pre-styling` : `nav__container`} ref={ref => this.navRef = ref}>
 
                         <div className="flex-row">
                             <h2 className="nav__initial white">F</h2>

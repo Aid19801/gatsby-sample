@@ -1,12 +1,12 @@
 import React from "react"
 import Link from 'gatsby-link';
-import Layout from '../components/layout';
+import withLayout from '../components/layout1';
 
 import SEO from "../components/seo"
 // import graphql from 'graphql';
 
 const BlogPage = ({ data }) => (
-    <Layout>
+    <>
         <SEO title="Home" />
         <h1>Latest Posts</h1>
 
@@ -23,7 +23,7 @@ const BlogPage = ({ data }) => (
             </div>
         ))}
 
-    </Layout>
+    </>
 );
 
 export const pageQuery = graphql`
@@ -44,5 +44,5 @@ export const pageQuery = graphql`
     }
 `
 
-export default BlogPage
+export default withLayout(BlogPage);
 
