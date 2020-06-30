@@ -1,7 +1,7 @@
 import React from 'react';
 import withLayout from '../components/layout1';
-import Pane from '../components/pane';
 import SEO from "../components/seo"
+import AboutPage from '../components/about';
 import './page.css';
 
 function About() {
@@ -10,17 +10,7 @@ function About() {
 
       <SEO title="About Us" />
 
-      <div class="wrapper">
-        <div className="pimg1 extra-height">
-          
-        </div>
-
-        <Pane />
-      
-      
-      </div>
-
-
+      <AboutPage />
 
     </React.Fragment>
   );
