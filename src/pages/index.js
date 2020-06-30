@@ -10,7 +10,7 @@ function Home() {
 
     useEffect(() => {
         TweenMax.fromTo(spanRef, .4, { opacity: 0, y: 100 }, {  opacity: 1, y: 0, ease: Power3.easeIn, delay: .5 });
-    }, [])
+    }, []);
 
     return (
         <React.Fragment>
@@ -19,7 +19,7 @@ function Home() {
             
             <div className="pimg1">
                 <div className="ptext">
-                    <h4 ref={ref => spanRef = ref} className="border">
+                    <h4 ref={ref => spanRef = ref} className="fade-in-pre-styling border">
                         Funk-27
                     </h4>
                 </div>
