@@ -1,0 +1,48 @@
+{
+    "title": "Funk-27",
+    "sections": [
+        {
+            "section_one": {
+                "title": "Who We Are",
+                "blurb": "At Funk, we bring six years of high quality, commercial Software Development to you at an affordable price. Our software developers have worked with some of the most impressive client names in their field from Sky to Thomson Reteurs, to newer names across the start-up and scale-up landscape. Whether it's Desktop Applications in NodeJS and Electron, an IOS/Android prototype in React Native or a new Sign-Up flow for your trading platform - our team are excited to help you get your idea to the next stage!"
+            }
+        },
+        {
+            "section_two": {
+                "title": "What We Do",
+                "blurb": "Funksters don't position themselves as over-promising Jacks-of-all-trades. We know exactly where our strengths lie. That's why a great deal of our client work sits within the Front End / UX arena. Websites, Webapps and Proof of Concept IOS/Android Applications. But we've recently flexed out to APIs, User Authentication and yes, okay, from time to time, Desktop applications. If you've got an idea for PC/Mac application, a promotional website, or you need a PoC IOS/Android app building, get in touch now!"
+            }
+        }
+    ],
+    "hero_text_one": "SMART SOLUTIONS",
+    "hero_text_two": "BRINGING YOUR IDEAS TO LIFE",
+    "hero_text_three": "WE LIVE TECH",
+    "services_title": "Get Funktional",
+    "services_blurb": "Whether you're a start-up looking for your first Proof Of Concept app or a business with hundreds of employees considering a new timesheeting system - we're here to look at the options with you and to deliver the technology you need. We span across the Front End and Middleware layers to bring you a slick user experience to attract the investment or customers you need to thrive.",
+    "projects": [
+        {
+            "title": "Sky Go",
+            "sub_title": "Desktop Application"
+        },
+        {
+            "title": "Infabode.com",
+            "sub_title": "Server Side Rendered Web-App"
+        },
+        {
+            "title": "Tradenation",
+            "sub_title": "User-Authentication Flow"
+        },
+        {
+            "title": "#ThatDadsApp",
+            "sub_title": "Proof Of Concept iOS/Android App"
+        },
+        {
+            "title": "The Panda Riot",
+            "sub_title": "Desktop Application & Website"
+        }
+    ],
+    "footer": {
+        "title": "© 2020 Funk-27",
+        "footer_text": "Funk-27 is a Limited Company findable on Companies House database as of July 2020. The business operates in a standard contractual, consultancy manner and will invoice on a 28-day periodical basis, except for in cases of Programme Delivery whereby a tranche arrangement may be considered. Funk-27 is lead by Director, Adrian Thompson and retain an office in South East / London"
+    }
+}

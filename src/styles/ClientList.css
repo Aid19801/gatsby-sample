@@ -1,0 +1,12 @@
+
+.client-imgs-container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .client-img {
+    height: 120px;
+    width: auto;
+    max-width: 320px;
+    filter: grayscale(1);
+    margin-right: 15px;
+  }

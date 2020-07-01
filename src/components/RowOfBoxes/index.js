@@ -1,13 +1,15 @@
 import React from 'react';
-import Computer from '../assets/computer.svg';
-import Money from '../assets/money.svg';
-import Graph from '../assets/graph.svg';
-import Desktop from '../assets/desktop.svg';
-import './RowOfBoxes.css';
+import Computer from '../../svgs/computer.svg';
+import Money from '../../svgs/money.svg';
+import Graph from '../../svgs/graph.svg';
+import Desktop from '../../svgs/desktop.svg';
+import '../../styles/RowOfBoxes.css';
 
 function RowOfBoxes({ ...props }) {
 
 return (
+    <React.Fragment>
+    <hr />
     <div className="stackable_row_of_svgs">
 
         <div className="eachSVG__description__container services opac-bg rounded">
@@ -45,6 +47,8 @@ return (
         </div>
 
   </div>
+  <hr />
+  </React.Fragment>
 );
 }
 export default RowOfBoxes

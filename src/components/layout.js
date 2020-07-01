@@ -1,72 +1,55 @@
-// import PropTypes from "prop-types"
-// import React, { useRef, useEffect, useState } from "react"
-// import Menu from "./menu"
-// import './header.css'
-// import './layout.css'
+/**
+ * Layout component that queries for data
+ * with Gatsby's useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.org/docs/use-static-query/
+ */
 
-// const Layout = () => {
+import React from "react"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
+import Header from "./header"
+import "./layout.css"
+import "../styles/utils.css";
 
-//   let fadeOutAsYouScrollRef = useRef(null);
-//   const [title, setTitle] = useState('');
-//   // let servicesDivSpanLineRef = useRef(null);
+const Layout = ({ children }) => {
 
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+          initials
+        }
+      }
+    }
+  `)
 
-//   useEffect(() => {
-//     createNewReferenceForEachPage();
-//   }, [])
+  return (
+    <React.Fragment>
+      <Header siteTitle={data.site.siteMetadata.initials} />
+      <div
+        style={{
+          margin: `0 auto`,
+          background: '#68a39e',
+          padding: `0 1.0875rem 1.45rem`,
+        }}
+        className="container-fluid"
+      >
 
-//   const createNewReferenceForEachPage = () => {
-//     const str = window.location.pathname.replace(/\//g, "");
-//     console.log('AT | str is :', str);
-//     if (!str) {
-      
-//     }
-//   }
-//   // fade out as you scroll down
-//   useEffect(() => {
-//     window.addEventListener('scroll', function () {
-//       fadeOutAsYouScrollRef.current.style.opacity = 1 - + window.pageYOffset / 350 + '';
-//     });
-//     takeTitleFromURLtrimSlashes();
-//   }, []);
+        <main>{children}</main>
+        <footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </footer>
+      </div>
+    </React.Fragment>
+  )
+}
 
-//   const takeTitleFromURLtrimSlashes = () => {
-//     const str = window.location.pathname.replace(/\//g, "");
-//     setTitle(str);
-//     console.log('AT | title is now :', title);
-//   }
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
-//   useEffect(() => {
-//     // TweenMax.fromTo(servicesDivSpanLineRef, .4, { width: 0 }, { width: '82%', ease: Power3.easeIn, delay: .7 });
-//   }, []);
-
-//   return (
-//     <React.Fragment>
-
-//       <div className="nav__container" ref={fadeOutAsYouScrollRef}>
-
-//         <div className="flex-row">
-//           <h2 className="nav__initial white">F</h2>
-//           <h2 className="nav__initial orange">27</h2>
-//         </div>
-
-//         <div className="nav__menu__container">
-//           <Menu />
-//         </div>
-
-//       </div>
-
-//     </React.Fragment>
-//   )
-// }
-
-
-// Layout.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
-
-// Layout.defaultProps = {
-//   siteTitle: ``,
-// }
-
-// export default Layout
+export default Layout

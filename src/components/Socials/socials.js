@@ -1,9 +1,9 @@
 import React from 'react';
-import Mail from '../assets/mail.svg';
-import Twitter from '../assets/twitter.svg';
-import Facebook from '../assets/facebook.svg';
-import Linkedin from '../assets/linkedin.svg';
-import './socials.css';
+import Mail from '../../svgs/mail.svg';
+import Twitter from '../../svgs/twitter.svg';
+import Facebook from '../../svgs/facebook.svg';
+import Linkedin from '../../svgs/linkedin.svg';
+import '../../styles/Socials.css';
 
 function Socials({ ...props }) {
 

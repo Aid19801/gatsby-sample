@@ -1,0 +1,22 @@
+hr {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  border: 0 !important;
+  border-top: 1px solid white !important;
+  opacity: 0.5 !important;
+  background-color: rgb(104, 163, 158) !important;
+  width: 59%;
+}
+
+.white {
+  color: white;
+}
+
+.contain-content {
+  contain: content;
+}
+
+.full-page-height {
+  height: 100vh;
+
+}
