@@ -1,7 +1,7 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { TweenMax } from 'gsap';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import RowOfBoxes from "../components/RowOfBoxes";
@@ -17,6 +17,13 @@ const IndexPage = () => {
 
   const { site: { siteMetadata: { hero_text_one, hero_text_two } } } = useStaticQuery(pageQuery);
 
+  let heroTextOneRef = useRef(null);
+  let rocketRef = useRef(null);
+
+  useEffect(() => {
+    TweenMax.fromTo(heroTextOneRef, .5, { opacity: 0, y: 50 }, { opacity: 1, y: 0, delay: .6});
+    TweenMax.fromTo(rocketRef, .3, { opacity: 0, y: 50 }, { opacity: 1, y: 0, delay: 2 });
+  }, [])
   return (
     <Layout>
 
@@ -25,11 +32,11 @@ const IndexPage = () => {
       <div className="row full-page-height">
 
         <div className="col-md-7 d-flex justify-content-center text-center">
-          <h1 className="big_title d-flex align-items-center">{hero_text_one}</h1>
+          <h1 ref={ref => heroTextOneRef = ref} className="big_title d-flex align-items-center">{hero_text_one}</h1>
         </div>
 
         <div className="col-md-5 d-flex justify-content-center contain-content align-items-center">
-          <img src={require('../images/rocket.jpg')} alt="rocket" />
+          <img ref={ref => rocketRef = ref} src={require('../images/rocket.jpg')} alt="rocket" />
         </div>
 
       </div>

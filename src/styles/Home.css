@@ -4,6 +4,13 @@
     color: white;
 }
 
+.full-page-height .big_title:nth-child(1) {
+    /* border: 2px solid red; */
+    opacity: 0;
+}
+
+
+
 .medium-title {
     font-size: 50px;
     color: white;

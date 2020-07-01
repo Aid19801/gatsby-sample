@@ -1,0 +1,11 @@
+header {
+    opacity: 0;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+header p:nth-child(2) {
+    color: orange;
+}

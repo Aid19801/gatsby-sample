@@ -1,7 +1,11 @@
+#___gatsby {
+  background-color: rgb(104, 163, 158);
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  /* background-color: red; */
 }
 body {
   margin: 0;
