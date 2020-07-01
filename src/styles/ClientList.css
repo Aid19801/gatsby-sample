@@ -10,3 +10,10 @@
     filter: grayscale(1);
     margin-right: 15px;
   }
+
+@media screen and (max-width: 500px) {
+
+    .client-img {
+      margin-right: 0;
+    }
+}

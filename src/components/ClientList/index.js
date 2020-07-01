@@ -8,7 +8,7 @@ function ClientList({ ...props }) {
             <hr />
             
             <h2 className="medium-title text-center">Our Clients</h2>
-            <div className="d-flex flex-row client-imgs-container">
+            <div className="w-100 d-flex flex-row client-imgs-container">
                 <img className="client-img" src={require('../../images/sky.png')} alt="sky" />
                 <img className="client-img" src={require('../../images/reuters.png')} alt="thomson_reuters" />
                 <img className="client-img" src={require('../../images/infabode.png')} alt="infabode" />
