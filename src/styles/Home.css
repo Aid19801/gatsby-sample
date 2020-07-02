@@ -23,11 +23,15 @@
     width: 550px;
 }
 
+
 @media screen and (max-width: 768px) {
     .big_title {
         margin-top: 80px;
     }
     .big_title:nth-child(1) {
         margin-top: 0;
+    }
+    .rocket-div {
+        margin-top: -100px !important;
     }
 }
