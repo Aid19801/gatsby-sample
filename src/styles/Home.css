@@ -9,6 +9,10 @@
     opacity: 0;
 }
 
+.rocket-div {
+    display: flex;
+    justify-content: start;
+}
 
 
 .medium-title {
@@ -27,6 +31,9 @@
 @media screen and (max-width: 768px) {
     .big_title {
         margin-top: 80px;
+    }
+    .rocket-div {
+        justify-content: center;
     }
     .big_title:nth-child(1) {
         margin-top: 0;

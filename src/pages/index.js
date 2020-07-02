@@ -35,7 +35,7 @@ const IndexPage = () => {
           <h1 ref={ref => heroTextOneRef = ref} className="big_title d-flex align-items-center">{hero_text_one}</h1>
         </div>
 
-        <div className=" rocket-div col-md-5 d-flex justify-content-center contain-content align-items-center">
+        <div className="rocket-div col-md-5 d-flex contain-content align-items-center">
           <img ref={ref => rocketRef = ref} src={require('../images/rocket.jpg')} alt="rocket" />
         </div>
 
