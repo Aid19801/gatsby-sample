@@ -98,7 +98,7 @@
   }
 
   .col-md-7.d-flex:nth-child(1) {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     z-index: 1;
   }
 
