@@ -55,9 +55,9 @@ const IndexPage = () => {
       </div>
 
     </div>
-    
 
-      <div className="row">
+
+      <div className="row clients-row">
 
         <div className="col-md-12 d-flex align-items-center flex-column">
           <ClientList />

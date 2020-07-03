@@ -4,6 +4,10 @@
   color: white;
 }
 
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
 
 .full-page-height .big_title:nth-child(1) {
   /* border: 2px solid red; */
@@ -68,6 +72,11 @@
   width: 550px;
 }
 
+.clients-row {
+  margin-top: 155px !important;
+  margin-bottom: 155px !important;
+}
+
 @media screen and (max-width: 768px) {
   .big_title {
     margin-top: 80px;
@@ -115,5 +124,9 @@
 
   .full-page-height:nth-child(1) {
     height: 90vh;
+  }
+  .clients-row {
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
   }
 }
