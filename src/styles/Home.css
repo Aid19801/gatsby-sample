@@ -107,8 +107,8 @@
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-repeat: inherit;
+    background-attachment: inherit;
     margin: 20px;
     border: 1px solid rgba(0, 0, 0, 0.3);
     width: 100%;
