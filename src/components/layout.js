@@ -32,9 +32,9 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           background: '#68a39e',
-          padding: `0 1.0875rem 1.45rem`,
+          
         }}
-        className="container-fluid"
+        className="container-fluid nopadding"
       >
 
         <main>{children}</main>

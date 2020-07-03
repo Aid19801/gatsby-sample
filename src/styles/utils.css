@@ -20,3 +20,11 @@ hr {
   height: 100vh;
 
 }
+
+.nopadding {
+  padding: 0 !important;
+}
+
+.bg-black {
+  background: black;
+}

@@ -29,6 +29,8 @@ const IndexPage = () => {
 
       <SEO title="Home" />
 
+     
+
       <div className="row full-page-height">
 
         <div className="col-md-7 d-flex justify-content-center text-center">
@@ -42,6 +44,19 @@ const IndexPage = () => {
       </div>
 
 
+      <div className="row full-page-height">
+
+      <div className="col-md-12 d-flex justify-content-center text-center nopadding bg-black">
+        <div
+          className="big-fade-img"
+          >
+          <h1>Funk-27</h1>
+        </div>
+      </div>
+
+    </div>
+    
+
       <div className="row">
 
         <div className="col-md-12 d-flex align-items-center flex-column">
@@ -49,6 +64,7 @@ const IndexPage = () => {
         </div>
 
       </div>
+
 
 
 
