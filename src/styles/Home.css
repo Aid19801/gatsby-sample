@@ -78,6 +78,7 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .big_title {
     margin-top: 80px;
   }
@@ -94,6 +95,11 @@
     max-width: 100%;
     margin-right: 0 !important;
     margin-left: 0 !important;
+  }
+
+  .col-md-7.d-flex:nth-child(1) {
+    border: 1px solid red;
+    z-index: 1;
   }
 
   .big-fade-img {
