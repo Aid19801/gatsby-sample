@@ -33,6 +33,8 @@ const IndexPage = () => {
 
       <div className="row full-page-height">
 
+        
+
         <div className="col-md-7 d-flex justify-content-center text-center">
           <h1 ref={ref => heroTextOneRef = ref} className="big_title d-flex align-items-center">{hero_text_one}</h1>
         </div>
@@ -70,12 +72,14 @@ const IndexPage = () => {
 
       <div className="row">
 
-        <div className="col-md-5 d-flex justify-content-center contain-content">
-          <img src={require('../images/rocket.jpg')} alt="rocket" />
+        <div className="col-md-6 d-flex justify-content-end contain-content">
+          <div className="box">
+            <img src={require('../images/manLaptop.jpeg')} alt="man with laptop" />
+          </div>
         </div>
 
 
-        <div className="col-md-7 d-flex justify-content-center text-center">
+        <div className="col-md-6 d-flex justify-content-center text-center">
           <h1 className="big_title d-flex align-items-center">{hero_text_two}</h1>
         </div>
 

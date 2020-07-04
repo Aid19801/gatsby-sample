@@ -46,7 +46,6 @@
   margin-bottom: 0;
 }
 
-
 .big-fade-img h1 {
   color: white;
   font-family: monospace;
@@ -82,11 +81,52 @@
   margin-bottom: 150px;
 }
 
+/* .box {
+  padding: 1rem;
+  position: relative;
+  padding: 23px;
+  transition: .2s;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 3s ease infinite;
+}
+
+.box > img {
+  background: #222;
+  color: white;
+  margin: 0;
+} */
+
+.box {
+  padding:5px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+
+.box > img {
+  /* background: #222;
+  color: white; */
+  margin: 0;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 @media screen and (max-width: 768px) {
 
   .row:nth-child(4) {
     /* border: 3px solid red; */
-    margin-bottom: 70px;
+    margin-bottom: 0px;
   }
 
   
