@@ -74,6 +74,19 @@
 .clients-row {
   margin-top: 155px !important;
   margin-bottom: 155px !important;
+  /* background-color: white; */
+}
+
+.ideas-row {
+  background: white;
+  box-shadow: 1px 17px 112px 152px white;
+  /* background-color: #68A39E; */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.ideas-row h1 {
+  color: #68A39E;
 }
 
 .row:nth-child(4) {

@@ -53,7 +53,7 @@ function ClientList({ ...props }) {
                 
             </div>
 
-            <hr />
+            
         </React.Fragment>
     );
 }

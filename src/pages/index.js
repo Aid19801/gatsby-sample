@@ -70,7 +70,7 @@ const IndexPage = () => {
 
 
 
-      <div className="row">
+      <div className="row ideas-row">
 
         <div className="col-md-6 d-flex justify-content-end contain-content">
           <div className="box">

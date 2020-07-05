@@ -9,7 +9,7 @@ function RowOfBoxes({ ...props }) {
 
 return (
     <React.Fragment>
-    <hr />
+    
     <div className="stackable_row_of_svgs">
 
         <div className="eachSVG__description__container services opac-bg rounded">
