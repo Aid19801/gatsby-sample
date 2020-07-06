@@ -25,12 +25,11 @@ function RowOfBoxes({ ...props }) {
 
 
                 <div
+                    onClick={() => handleSelect(false)}
                     className={`popout__container ${showPopout ? "active" : ""}`}
                 >
 
-                <h4 onClick={() => handleSelect(false)}>close</h4>
-                
-                    <div className="popout__container__inner">
+                    <div className={`popout__container__inner ${showPopout ? "bounceup" : ""}`}>
                         <div className="popout__small_icon_container">
                             {popoutIcon === 'Computer' && <Computer />}
                             {popoutIcon === 'Money' && <Money />}
