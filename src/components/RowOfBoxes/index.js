@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { TweenMax, Power3 } from 'gsap';
+import React, { useEffect, useState } from 'react';
+// import { TweenMax, Power3 } from 'gsap';
 import Computer from '../../svgs/computer.svg';
 import Money from '../../svgs/money.svg';
 import Graph from '../../svgs/graph.svg';
@@ -27,16 +27,19 @@ function RowOfBoxes({ ...props }) {
                 <div
                     className={`popout__container ${showPopout ? "active" : ""}`}
                 >
-                    <h4 onClick={() => handleSelect(false)}>close</h4>
 
-                    <div className="popout__small_icon_container">
-                        {popoutIcon === 'Computer' && <Computer />}
-                        {popoutIcon === 'Money' && <Money />}
-                        {popoutIcon === 'Graph' && <Graph />}
-                        {popoutIcon === 'Desktop' && <Desktop />}
+                <h4 onClick={() => handleSelect(false)}>close</h4>
+                
+                    <div className="popout__container__inner">
+                        <div className="popout__small_icon_container">
+                            {popoutIcon === 'Computer' && <Computer />}
+                            {popoutIcon === 'Money' && <Money />}
+                            {popoutIcon === 'Graph' && <Graph />}
+                            {popoutIcon === 'Desktop' && <Desktop />}
+                        </div>
+                        <h4>API and Data</h4>
+                        <p>He’d taken the drug to blunt SAS, nausea, but the muted purring of the car’s floor. Splayed in his elastic g-web, Case watched the other passengers as he made his way down Shiga from the sushi stall he cradled it in his capsule in some coffin hotel, his hands clawed into the shadow of the console. Her cheekbones flaring scarlet as Wizard’s Castle burned, forehead drenched with azure when Munich fell to the Tank War, mouth touched with hot gold as a gliding cursor struck sparks from the Chinese program’s thrust, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time. Before they could stampede, take flight from the Chinese program’s thrust.</p>
                     </div>
-                    <h4>API and Data</h4>
-                    <p>He’d taken the drug to blunt SAS, nausea, but the muted purring of the car’s floor. Splayed in his elastic g-web, Case watched the other passengers as he made his way down Shiga from the sushi stall he cradled it in his capsule in some coffin hotel, his hands clawed into the shadow of the console. Her cheekbones flaring scarlet as Wizard’s Castle burned, forehead drenched with azure when Munich fell to the Tank War, mouth touched with hot gold as a gliding cursor struck sparks from the Chinese program’s thrust, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time. Before they could stampede, take flight from the Chinese program’s thrust.</p>
                 </div>
 
 
