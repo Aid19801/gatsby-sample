@@ -129,6 +129,7 @@
     flex-direction: row;
     justify-content: flex-start;
     color: black;
+    opacity: 0;
     align-items: center;
     min-width: 78%;
     margin-bottom: 35px;
@@ -138,7 +139,7 @@
     height: 60px;
     width: 60px;
     min-width: 60px;
-    /* border: 5px solid orange; */
+    /* opacity: 0; */
     border-radius: 100px;
     position: relative;
 }
@@ -162,6 +163,8 @@
 .popout__container.active {
     opacity: 3;
     z-index: 1;
+    transition: .3s;
+    transition-timing-function: ease;
 }
 
 .popout__container__inner.bounceup {

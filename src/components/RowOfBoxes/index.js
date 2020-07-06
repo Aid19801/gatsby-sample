@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // a load of SVGs
 import Computer from '../../svgs/computer.svg';
@@ -32,18 +32,28 @@ function RowOfBoxes({ info }) {
     const [showPopout, setShowPopout] = useState(false);
     const [popoutInfo, setPopoutInfo] = useState(null);
 
+    let bulletOneRef = useRef(null);
+    let bulletTwoRef = useRef(null);
+    let bulletThreeRef = useRef(null);
+
     const { site: { siteMetadata: { boxesInfo } } } = useStaticQuery(boxesQuery);
 
     const handleSelect = (bool, info) => {
         setShowPopout(bool);
         if (info) {
             setPopoutInfo(info);
+            TweenMax.to(bulletOneRef, 1, { opacity: 1, delay: 1 });
+            TweenMax.to(bulletTwoRef, 1, { opacity: 1, delay: 1.1 });
+            TweenMax.to(bulletThreeRef, 1, { opacity: 1, delay: 1.2 });
         }
     }
 
-    useEffect(() => {
-
-    }, []);
+    const killAndResetAnims = () => {
+        handleSelect(false);
+        TweenMax.to(bulletOneRef, 1, { opacity: 0, delay: 0 });
+        TweenMax.to(bulletTwoRef, 1, { opacity: 0, delay: 0 });
+        TweenMax.to(bulletThreeRef, 1, { opacity: 0, delay: 0 });
+    }
 
     return (
         <React.Fragment>
@@ -52,7 +62,7 @@ function RowOfBoxes({ info }) {
 
 
                 <div
-                    onClick={() => handleSelect(false)}
+                    onClick={() => killAndResetAnims()}
                     className={`popout__container ${showPopout ? "active" : ""}`}
                 >
 
@@ -70,7 +80,7 @@ function RowOfBoxes({ info }) {
 
                         <ul>
 
-                            <li>
+                            <li ref={ref => bulletOneRef = ref}>
                                 <div className="popout__bullets__svg__container">
                                     {popoutInfo && popoutInfo.bulletOneSVG === 'blogs' && <Blogs />}
                                     {popoutInfo && popoutInfo.bulletOneSVG === 'cross_platform' && <CrossPlatform />}
@@ -79,7 +89,7 @@ function RowOfBoxes({ info }) {
                                 </div>
                                 <p>{popoutInfo && popoutInfo.bulletOne}</p>
                             </li>
-                            <li>
+                            <li ref={ref => bulletTwoRef = ref}>
                                 <div className="popout__bullets__svg__container">
                                     {popoutInfo && popoutInfo.bulletTwoSVG === 'sign_in' && <SignInSVG />}
                                     {popoutInfo && popoutInfo.bulletTwoSVG === 'design' && <DesignSVG />}
@@ -88,7 +98,7 @@ function RowOfBoxes({ info }) {
                                 </div>
                                 <p>{popoutInfo && popoutInfo.bulletTwo}</p>
                             </li>
-                            <li>
+                            <li ref={ref => bulletThreeRef = ref}>
                                 <div className="popout__bullets__svg__container">
                                     {popoutInfo && popoutInfo.bulletThreeSVG === 'e_comm' && <ECommerce />}
                                     {popoutInfo && popoutInfo.bulletThreeSVG === 'visits' && <VisitsSVG />}
