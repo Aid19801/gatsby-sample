@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
+// a load of SVGs
 import Computer from '../../svgs/computer.svg';
 import Money from '../../svgs/money.svg';
 import Graph from '../../svgs/graph.svg';
@@ -13,14 +14,17 @@ import ApiSVG from '../../svgs/api.svg';
 import Blogs from '../../svgs/blogs.svg';
 import SignInSVG from '../../svgs/sign_in.svg';
 import ECommerce from '../../svgs/e_comm.svg';
-
 import SoftwareSVG from '../../svgs/software.svg';
 import SecuritySVG from '../../svgs/security.svg';
 import FilesSVG from '../../svgs/files.svg';
 
+// Animation
+import { TweenMax, Power3 } from 'gsap';
 
-
+// Gatsby / GQL
 import { useStaticQuery, graphql } from "gatsby"
+
+// CSS
 import '../../styles/RowOfBoxes.css';
 
 function RowOfBoxes({ info }) {
@@ -34,11 +38,12 @@ function RowOfBoxes({ info }) {
         setShowPopout(bool);
         if (info) {
             setPopoutInfo(info);
-
         }
     }
 
-    console.log('AT | popoutInfo:', popoutInfo);
+    useEffect(() => {
+
+    }, []);
 
     return (
         <React.Fragment>
@@ -60,7 +65,7 @@ function RowOfBoxes({ info }) {
                         </div>
 
                         <h4>{popoutInfo && popoutInfo.title}</h4>
-                        <p>{popoutInfo && popoutInfo.blurb}</p>
+                        <p className="blurb">{popoutInfo && popoutInfo.blurb}</p>
 
 
                         <ul>
