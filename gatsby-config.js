@@ -8,9 +8,72 @@ module.exports = {
     twitterUsername: `@funkTwentySeven`,
     url: `https://funk27.com`,
     hero_text_one: `We Live Tech.`,
-    hero_text_two: `IDEAS 2 LIFE.`,
-    hero_text_three: `SMART SOLUTIONS`
-  },
+    hero_text_two: `IDEAS 4 LIFE.`,
+    hero_text_three: `SMART SOLUTIONS`,
+    boxesInfo: [
+        {
+          type: "web",
+          title: "Websites & Webapps",
+          icon: "Computer",
+          blurb: "Funktastic websites & web-applications designed specifically for you to grow your business.",
+          
+          bulletOne: "Shareable Blogs",
+          bulletOneSVG: 'blogs',
+
+          bulletTwo: "SignIn & SignUp functionality",
+          bulletTwoSVG: 'sign_in',
+
+          bulletThree: "The eCommerce experience your users want",
+          bulletThreeSVG: 'e_comm',
+        },
+        {
+          type: "mob",
+          title: "IOS / Android Apps",
+          icon: "Money",
+          blurb: "Electric apps for slick performance and rewarding engagement.",
+          
+          bulletOne: "Cross-platform (ios/android) compatability",
+          bulletOneSVG: 'cross_platform',
+
+          bulletTwo: "Elegant design",
+          bulletTwoSVG: 'design',
+
+          bulletThree: "Proven useability and returning visits",
+          bulletThreeSVG: 'visits',
+        },
+        {
+          type: "data",
+          title: "API & Data",
+          icon: "Graph",
+          blurb: "Get the information in, in the way that you want it.",
+          bulletOne: "REST or GraphQL API experience",
+          bulletOneSVG: 'api',
+          
+          bulletTwo: "Exposure to multiple top-tier databases, including MongoDB, Firebase (Db & Firestore) and MySQL",
+          bulletTwoSVG: 'db',
+
+          bulletThree: "Real-time data for immediate, agile performance",
+          bulletThreeSVG: 'real_time',
+        },
+        {
+          type: "applications",
+          title: "Desktop Applications",
+          icon: "Desktop",
+          blurb: "Take advantage of the upticks that PC/Mac installed software can generate.",
+          bulletOne: "File system access",
+          bulletOneSVG: 'files',
+
+          bulletTwo: "Greater security",
+          bulletTwoSVG: 'security',
+          
+          bulletThree: "Installable, proprietary software",
+          bulletThreeSVG: 'software',
+        }
+    ]
+
+    
+    
+    },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

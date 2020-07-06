@@ -1,22 +1,44 @@
-import React, { useEffect, useState } from 'react';
-// import { TweenMax, Power3 } from 'gsap';
+import React, { useState } from 'react';
+
 import Computer from '../../svgs/computer.svg';
 import Money from '../../svgs/money.svg';
 import Graph from '../../svgs/graph.svg';
 import Desktop from '../../svgs/desktop.svg';
+import CrossPlatform from '../../svgs/cross_platform.svg';
+import DesignSVG from '../../svgs/design.svg';
+import VisitsSVG from '../../svgs/visits.svg';
+import DatabaseSVG from '../../svgs/db.svg';
+import RealTimeSVG from '../../svgs/real_time.svg';
+import ApiSVG from '../../svgs/api.svg';
+import Blogs from '../../svgs/blogs.svg';
+import SignInSVG from '../../svgs/sign_in.svg';
+import ECommerce from '../../svgs/e_comm.svg';
+
+import SoftwareSVG from '../../svgs/software.svg';
+import SecuritySVG from '../../svgs/security.svg';
+import FilesSVG from '../../svgs/files.svg';
+
+
+
+import { useStaticQuery, graphql } from "gatsby"
 import '../../styles/RowOfBoxes.css';
 
-function RowOfBoxes({ ...props }) {
+function RowOfBoxes({ info }) {
 
     const [showPopout, setShowPopout] = useState(false);
-    const [popoutIcon, setPopoutIcon] = useState(null);
+    const [popoutInfo, setPopoutInfo] = useState(null);
 
-    const handleSelect = (bool, icon) => {
+    const { site: { siteMetadata: { boxesInfo } } } = useStaticQuery(boxesQuery);
+
+    const handleSelect = (bool, info) => {
         setShowPopout(bool);
-        if (icon) {
-            setPopoutIcon(icon);
+        if (info) {
+            setPopoutInfo(info);
+
         }
     }
+
+    console.log('AT | popoutInfo:', popoutInfo);
 
     return (
         <React.Fragment>
@@ -31,67 +53,93 @@ function RowOfBoxes({ ...props }) {
 
                     <div className={`popout__container__inner ${showPopout ? "bounceup" : ""}`}>
                         <div className="popout__small_icon_container">
-                            {popoutIcon === 'Computer' && <Computer />}
-                            {popoutIcon === 'Money' && <Money />}
-                            {popoutIcon === 'Graph' && <Graph />}
-                            {popoutIcon === 'Desktop' && <Desktop />}
+                            {popoutInfo && popoutInfo.type === 'web' && <Computer />}
+                            {popoutInfo && popoutInfo.type === 'mob' && <Money />}
+                            {popoutInfo && popoutInfo.type === 'data' && <Graph />}
+                            {popoutInfo && popoutInfo.type === 'applications' && <Desktop />}
                         </div>
-                        <h4>API and Data</h4>
-                        <p>He’d taken the drug to blunt SAS, nausea, but the muted purring of the car’s floor. Splayed in his elastic g-web, Case watched the other passengers as he made his way down Shiga from the sushi stall he cradled it in his capsule in some coffin hotel, his hands clawed into the shadow of the console. Her cheekbones flaring scarlet as Wizard’s Castle burned, forehead drenched with azure when Munich fell to the Tank War, mouth touched with hot gold as a gliding cursor struck sparks from the Chinese program’s thrust, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time. Before they could stampede, take flight from the Chinese program’s thrust.</p>
+
+                        <h4>{popoutInfo && popoutInfo.title}</h4>
+                        <p>{popoutInfo && popoutInfo.blurb}</p>
+
+
+                        <ul>
+
+                            <li>
+                                <div className="popout__bullets__svg__container">
+                                    {popoutInfo && popoutInfo.bulletOneSVG === 'blogs' && <Blogs />}
+                                    {popoutInfo && popoutInfo.bulletOneSVG === 'cross_platform' && <CrossPlatform />}
+                                    {popoutInfo && popoutInfo.bulletOneSVG === 'api' && <ApiSVG />}
+                                    {popoutInfo && popoutInfo.bulletOneSVG === 'files' && <FilesSVG />}
+                                </div>
+                                <p>{popoutInfo && popoutInfo.bulletOne}</p>
+                            </li>
+                            <li>
+                                <div className="popout__bullets__svg__container">
+                                    {popoutInfo && popoutInfo.bulletTwoSVG === 'sign_in' && <SignInSVG />}
+                                    {popoutInfo && popoutInfo.bulletTwoSVG === 'design' && <DesignSVG />}
+                                    {popoutInfo && popoutInfo.bulletTwoSVG === 'db' && <DatabaseSVG />}
+                                    {popoutInfo && popoutInfo.bulletTwoSVG === 'security' && <SecuritySVG />}
+                                </div>
+                                <p>{popoutInfo && popoutInfo.bulletTwo}</p>
+                            </li>
+                            <li>
+                                <div className="popout__bullets__svg__container">
+                                    {popoutInfo && popoutInfo.bulletThreeSVG === 'e_comm' && <ECommerce />}
+                                    {popoutInfo && popoutInfo.bulletThreeSVG === 'visits' && <VisitsSVG />}
+                                    {popoutInfo && popoutInfo.bulletThreeSVG === 'real_time' && <RealTimeSVG />}
+                                    {popoutInfo && popoutInfo.bulletThreeSVG === 'software' && <SoftwareSVG />}
+                                </div>
+                                <p>{popoutInfo && popoutInfo.bulletThree}</p>
+                            </li>
+                        </ul>
+
+
                     </div>
                 </div>
 
+                {boxesInfo && boxesInfo.map((each, i) => (
+                    <div
+                        key={i}
+                        className="eachSVG__description__container services opac-bg rounded"
+                        onClick={() => handleSelect(true, each)}
+                    >
 
-                <div
-                    className="eachSVG__description__container services opac-bg rounded"
-                    onClick={() => handleSelect(true, 'Computer')}
-                >
-
-                    <div className="svg__container">
-                        <Computer />
+                        <div className="svg__container">
+                            {each.icon === "Computer" && <Computer />}
+                            {each.icon === "Money" && <Money />}
+                            {each.icon === "Graph" && <Graph />}
+                            {each.icon === "Desktop" && <Desktop />}
+                        </div>
+                        <h3 className="white start svg__descr">{each.title}</h3>
                     </div>
-                    <h3 className="white start svg__descr">Websites & Web-apps</h3>
-                </div>
-
-                <div
-                    className="eachSVG__description__container services opac-bg rounded"
-                    onClick={() => handleSelect(true, 'Money')}
-                >
-
-                    <div className="svg__container">
-                        <Money />
-                    </div>
-
-                    <h3 className="white start svg__descr">IOS/Android applications</h3>
-                </div>
-
-                <div
-                    className="eachSVG__description__container services opac-bg rounded"
-                    onClick={() => handleSelect(true, 'Graph')}
-                >
-
-                    <div className="svg__container">
-                        <Graph />
-                    </div>
-
-                    <h3 className="white start svg__descr">API & Data</h3>
-                </div>
-                <div
-                    className="eachSVG__description__container services opac-bg rounded"
-                    onClick={() => handleSelect(true, 'Desktop')}
-                >
-
-
-                    <div className="svg__container">
-                        <Desktop />
-                    </div>
-
-                    <h3 className="white start svg__descr">Desktop Applications</h3>
-                </div>
+                ))}
 
             </div>
             <hr />
         </React.Fragment>
     );
 }
+
+export const boxesQuery = graphql`
+    query boxesQuery {
+        site {
+            siteMetadata {
+                boxesInfo {
+                    type
+                    title
+                    icon
+                    blurb
+                    bulletOne
+                    bulletOneSVG
+                    bulletTwo
+                    bulletTwoSVG
+                    bulletThree
+                    bulletThreeSVG
+                  }
+
+            }
+        }
+    }
+`
 export default RowOfBoxes
