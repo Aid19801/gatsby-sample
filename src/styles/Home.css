@@ -203,5 +203,6 @@
   .ideas-row h1 {
     color: #68A39E;
     font-size: 118px;
+    max-width: 90%;
   }
 }
