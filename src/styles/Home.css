@@ -209,8 +209,8 @@
 @media only screen and (max-width: 480px) {
   .ideas-row h1 {
     color: #68A39E;
-    font-size: 118px;
-    max-width: 96%;
+    font-size: 13vh;
+    max-width: 100vw;
     border: 1px solid red;
 
   }
