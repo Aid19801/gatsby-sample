@@ -23,6 +23,7 @@ const IndexPage = () => {
   let rocketRef = useRef(null);
 
   let ideasImageRef = useRef(null);
+  let ideasTitleRef = useRef(null);
 
   useEffect(() => {
     if (typeof window !== `undefined`) {
@@ -48,6 +49,11 @@ const IndexPage = () => {
         delay: .6,
         ease: Power3.easeIn,
       });
+
+      gsap.fromTo(ideasTitleRef,
+        { scrollTrigger: ideasTitleRef, x: 500 },
+        { scrollTrigger: ideasTitleRef, x: 0 },
+        )
 
   }, [])
 
@@ -104,7 +110,7 @@ const IndexPage = () => {
 
 
         <div className="col-md-6 d-flex justify-content-center text-center">
-          <h1 className="big_title d-flex align-items-center cursive">{hero_text_two}</h1>
+          <h1 ref={ref => ideasTitleRef = ref} className="big_title d-flex align-items-center cursive">{hero_text_two}</h1>
         </div>
 
 
