@@ -50,6 +50,8 @@
 
 .popout__container {
     position: fixed;
+    display: flex;
+    justify-content: center;
     top: 0px;
     height: 100vh;
     width: 100vw;
@@ -73,7 +75,7 @@
 
 .popout__container__inner {
     margin-top: 500px;
-    width: 100%;
+    width: 70%;
     height: auto;
     background-color: mintcream;
     border-radius: 25px;
@@ -120,19 +122,28 @@
     list-style-type: none;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    /* border: 1px solid blue; */
+    align-items: center;
+    align-content: center;
 }
 
 .popout__container__inner ul li {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
-    justify-content: flex-start;
+    /* border: 1px solid red; */
+    /* justify-content: flex-start; */
     color: black;
     opacity: 0;
     align-items: center;
-    min-width: 78%;
-    margin-bottom: 35px;
+    /* min-width: 470px; */
+    /* margin-bottom: 35px; */
+    max-width: 96%;
+    min-width: 96%;
 }
 
 .popout__bullets__svg__container {
@@ -150,7 +161,7 @@
     width: 100%;
     border: 5px solid orange;
     border-radius: 100px;
-    box-shadow: 4px 2px 30px 9px lightgrey;
+    /* box-shadow: 4px 2px 30px 9px lightgrey; */
 }
 
 .popout__container__inner ul li p {
@@ -208,6 +219,16 @@
 }
 
 @media screen and (max-width: 900px) {
+    .popout__container__inner {
+        width: 100%;
+        justify-content: start;
+    }
+    .popout__container__inner ul {
+        flex-direction: column;    
+    }
+    .popout__container__inner ul li {
+        justify-content: flex-start;
+    }
     .stackable_row_of_svgs {
         flex-direction: column;
         align-items: center;
