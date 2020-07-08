@@ -29,7 +29,8 @@ import '../../styles/RowOfBoxes.css';
 
 function RowOfBoxes({ info }) {
 
-    const [showPopout, setShowPopout] = useState(false);
+    const [ showPopout, setShowPopOut ] = useState(false);
+    const [popoutInnerClass, setPopoutInnerClass] = useState('');
     const [popoutInfo, setPopoutInfo] = useState(null);
 
     let bulletOneRef = useRef(null);
@@ -38,18 +39,20 @@ function RowOfBoxes({ info }) {
 
     const { site: { siteMetadata: { boxesInfo } } } = useStaticQuery(boxesQuery);
 
-    const handleSelect = (bool, info) => {
-        setShowPopout(bool);
+    const handleSelect = (cn, info) => {
+        setPopoutInnerClass(cn);
+        setShowPopOut(true);
         if (info) {
             setPopoutInfo(info);
             TweenMax.to(bulletOneRef, 1, { opacity: 1, delay: 1 });
-            TweenMax.to(bulletTwoRef, 1, { opacity: 1, delay: 1.1 });
-            TweenMax.to(bulletThreeRef, 1, { opacity: 1, delay: 1.2 });
+            TweenMax.to(bulletTwoRef, 1, { opacity: 1, delay: 1.2 });
+            TweenMax.to(bulletThreeRef, 1, { opacity: 1, delay: 1.4 });
         }
     }
 
     const killAndResetAnims = () => {
-        handleSelect(false);
+        setPopoutInnerClass('inactive');
+        setShowPopOut(false);
         TweenMax.to(bulletOneRef, 1, { opacity: 0, delay: 0 });
         TweenMax.to(bulletTwoRef, 1, { opacity: 0, delay: 0 });
         TweenMax.to(bulletThreeRef, 1, { opacity: 0, delay: 0 });
@@ -60,13 +63,12 @@ function RowOfBoxes({ info }) {
 
             <div className="stackable_row_of_svgs">
 
-
                 <div
                     onClick={() => killAndResetAnims()}
                     className={`popout__container ${showPopout ? "active" : ""}`}
                 >
 
-                    <div className={`popout__container__inner ${showPopout ? "bounceup" : ""}`}>
+                    <div className={`popout__container__inner ${popoutInnerClass}`}>
                         <div className="popout__small_icon_container">
                             {popoutInfo && popoutInfo.type === 'web' && <Computer />}
                             {popoutInfo && popoutInfo.type === 'mob' && <Money />}
@@ -117,7 +119,7 @@ function RowOfBoxes({ info }) {
                     <div
                         key={i}
                         className="eachSVG__description__container services opac-bg rounded"
-                        onClick={() => handleSelect(true, each)}
+                        onClick={() => handleSelect('active', each)}
                     >
 
                         <div className="svg__container">

@@ -87,6 +87,7 @@
 
 .ideas-row h1 {
   color: #68A39E;
+  font-size: 150px;
 }
 
 .row:nth-child(4) {
@@ -198,5 +199,9 @@
   .clients-row {
     margin-top: 40px !important;
     margin-bottom: 40px !important;
+  }
+  .ideas-row h1 {
+    color: #68A39E;
+    font-size: 118px;
   }
 }

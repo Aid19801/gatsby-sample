@@ -20,7 +20,7 @@
 }
 
 .socials__svg_descr_container svg {
-    height: 100px;
+    height: 59px;
     width: auto;
 }
 
@@ -28,6 +28,8 @@
     color: #ddd;
     background-color: #666;
     padding: 10px 20px;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 5px;
 }
 
 .socials__container a {
@@ -50,21 +52,21 @@
         /* flex-direction: column; */
     }
 
+    
+
     .ptext.contact__page {
         top: 22%;
     }
 
     .socials__svg_descr_container p {
-        font-size: 17px;
-        margin-top: 7px;
-        margin-top: 10px;
+        display: none;
     }
 
     .socials__svg_descr_container {
         margin-bottom: 50px;
     }
     .socials__svg_descr_container svg {
-        height: 80px;
+        height: 50px;
         width: auto;
     }
 

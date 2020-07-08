@@ -80,7 +80,7 @@ const IndexPage = () => {
 
 
         <div className="col-md-6 d-flex justify-content-center text-center">
-          <h1 className="big_title d-flex align-items-center">{hero_text_two}</h1>
+          <h1 className="big_title d-flex align-items-center cursive">{hero_text_two}</h1>
         </div>
 
 
@@ -108,7 +108,7 @@ const IndexPage = () => {
 
 
 
-      <Link to="/page-2/">Go to page 2</Link> <br />
+      <Link to="/contact"><h2 className="white cursive text-align-center">Say Hi!</h2></Link> <br />
 
       
 

@@ -8,7 +8,7 @@ module.exports = {
     twitterUsername: `@funkTwentySeven`,
     url: `https://funk27.com`,
     hero_text_one: `We Live Tech.`,
-    hero_text_two: `IDEAS 4 LIFE.`,
+    hero_text_two: `Elegant Design.`,
     hero_text_three: `SMART SOLUTIONS`,
     boxesInfo: [
         {
@@ -49,7 +49,7 @@ module.exports = {
           bulletOne: "REST or GraphQL API experience",
           bulletOneSVG: 'api',
           
-          bulletTwo: "Exposure to multiple top-tier databases, including MongoDB, Firebase (Db & Firestore) and MySQL",
+          bulletTwo: "First-tier databases for maximum security",
           bulletTwoSVG: 'db',
 
           bulletThree: "Real-time data for immediate, agile performance",

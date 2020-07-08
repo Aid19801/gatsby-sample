@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 #___gatsby {
   background-color: #68A39E;
 }
@@ -618,6 +621,13 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
+}
+
+.cursive {
+  font-family: 'Dancing Script', cursive;
+}
+.text-align-center {
+  text-align: center;
 }
 @media only screen and (max-width: 480px) {
   html {
