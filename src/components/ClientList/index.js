@@ -24,11 +24,18 @@ function ClientList({ ...props }) {
     }, [])
 
     useEffect(() => {
-        let myTween = new TimelineLite({ paused: true });
-
-        myTween.from(divRef, 0.5, { y: 100 })
-            .to(divRef, 0.5, { y: 0, x: 0 })
-            .play();
+        gsap.fromTo(divRef,
+            {
+                scrollTrigger: divRef,
+                y: 100,
+                opacity: 0
+            },
+            {
+            scrollTrigger: divRef, // start the animation when ".box" enters the viewport (once)
+            y: 0,
+            opacity: 1,
+            delay: .3,
+          });
 
     }, [])
 
@@ -39,21 +46,21 @@ function ClientList({ ...props }) {
             <h2 className="clients-title medium-title text-center">Our Clients</h2>
 
             <div ref={ref => divRef = ref} className="w-100 d-flex flex-row client-imgs-container">
-            { clientsArray.map((each, index) => {
-                return (
-                    <img
-                        key={index}
-                        className="client-img"
-                        alt={`${each} logo`}
-                        src={require(`../../images/${each}.png`)}
-                        ref={ref => elements[index] = ref}
+                {clientsArray.map((each, index) => {
+                    return (
+                        <img
+                            key={index}
+                            className="client-img"
+                            alt={`${each} logo`}
+                            src={require(`../../images/${each}.png`)}
+                            ref={ref => elements[index] = ref}
                         />
-                )
-            })}
-                
+                    )
+                })}
+
             </div>
 
-            
+
         </React.Fragment>
     );
 }
