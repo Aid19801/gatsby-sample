@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import { TweenMax } from 'gsap';
+import { gsap, Power3, TimelineLite } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import RowOfBoxes from "../components/RowOfBoxes";
@@ -20,20 +22,45 @@ const IndexPage = () => {
   let heroTextOneRef = useRef(null);
   let rocketRef = useRef(null);
 
+  let ideasImageRef = useRef(null);
+
   useEffect(() => {
-    TweenMax.fromTo(heroTextOneRef, .5, { opacity: 0, y: 50 }, { opacity: 1, y: 0, delay: .6});
-    TweenMax.fromTo(rocketRef, .3, { opacity: 0, y: 50 }, { opacity: 1, y: 0, delay: 2 });
+    if (typeof window !== `undefined`) {
+      gsap.registerPlugin(ScrollTrigger)
+      gsap.core.globals("ScrollTrigger", ScrollTrigger)
+    }
   }, [])
+
+  useEffect(() => {
+    TweenMax.fromTo(heroTextOneRef, .5, { opacity: 0, y: 50 }, { opacity: 1, y: 0, delay: .6 });
+    TweenMax.fromTo(rocketRef, .3, { opacity: 0, y: 50 }, { opacity: 1, y: 0, delay: 2 });
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(ideasImageRef,
+      {
+        scrollTrigger: ideasImageRef,
+        opacity: 0
+      },
+      {
+        scrollTrigger: ideasImageRef,
+        opacity: 1,
+        delay: .6,
+        ease: Power3.easeIn,
+      });
+
+  }, [])
+
   return (
     <Layout>
 
       <SEO title="Home" />
 
-     
+
 
       <div className="row full-page-height">
 
-        
+
 
         <div className="col-md-7 d-flex justify-content-center text-center">
           <h1 ref={ref => heroTextOneRef = ref} className="big_title d-flex align-items-center">{hero_text_one}</h1>
@@ -48,15 +75,15 @@ const IndexPage = () => {
 
       <div className="row full-page-height">
 
-      <div className="col-md-12 d-flex justify-content-center text-center nopadding bg-black">
-        <div
-          className="big-fade-img"
+        <div className="col-md-12 d-flex justify-content-center text-center nopadding bg-black">
+          <div
+            className="big-fade-img"
           >
-          <h1>Funk-27</h1>
+            <h1>Funk-27</h1>
+          </div>
         </div>
-      </div>
 
-    </div>
+      </div>
 
 
       <div className="row clients-row">
@@ -67,14 +94,11 @@ const IndexPage = () => {
 
       </div>
 
-
-
-
       <div className="row ideas-row">
 
         <div className="col-md-6 d-flex justify-content-end contain-content">
           <div className="box">
-            <img src={require('../images/manLaptop.jpeg')} alt="man with laptop" />
+            <img ref={ref => ideasImageRef = ref} src={require('../images/manLaptop.jpeg')} alt="man with laptop" />
           </div>
         </div>
 
@@ -110,7 +134,7 @@ const IndexPage = () => {
 
       <Link to="/contact"><h2 className="white cursive text-align-center">Say Hi!</h2></Link> <br />
 
-      
+
 
     </Layout>
   )
