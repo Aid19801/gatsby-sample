@@ -52,7 +52,7 @@ const ContactPage = () => {
 
 
 
-        <div className="col-md-5 d-flex justify-content-center">
+        <div className="contact_form col-md-6 d-flex justify-content-center">
 
           <form
             name="contact"
