@@ -9,12 +9,8 @@ const clientsArray = ['sky', 'reuters', 'infabode', 'finsa', 'tradenation'];
 function ClientList({ ...props }) {
 
     let divRef = useRef(null)
-    // let h2ref = useRef(null)
-    // const [ elements, setElements ] = useState([]);
 
     let elements = [];
-
-    // let myTween = TimelineLite({ paused: true });
 
     useEffect(() => {
         if (typeof window !== `undefined`) {
