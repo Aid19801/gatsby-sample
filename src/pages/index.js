@@ -51,8 +51,8 @@ const IndexPage = () => {
       });
 
       gsap.fromTo(ideasTitleRef,
-        { scrollTrigger: ideasTitleRef, x: 500 },
-        { scrollTrigger: ideasTitleRef, x: 0 },
+        { scrollTrigger: ideasTitleRef, opacity: 0, y: 50 },
+        { scrollTrigger: ideasTitleRef, opacity: 1, y: 0 },
         )
 
   }, [])
