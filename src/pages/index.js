@@ -50,9 +50,11 @@ const IndexPage = () => {
         ease: Power3.easeIn,
       });
 
-      gsap.fromTo(ideasTitleRef,
-        { scrollTrigger: ideasTitleRef, opacity: 0, y: 50 },
-        { scrollTrigger: ideasTitleRef, opacity: 1, y: 0 },
+      gsap.fromTo(ideasTitleRef, .5,
+        { scrollTrigger: ideasTitleRef, y: 50 },
+        { scrollTrigger: ideasTitleRef, y: 0, delay: 1,
+          ease: Power3.easeIn, },
+
         )
 
   }, [])
