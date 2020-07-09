@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { gsap, Power3, TimelineLite } from "gsap"
+import React, { useEffect, useRef } from 'react';
+import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import '../../styles/ClientList.css';
