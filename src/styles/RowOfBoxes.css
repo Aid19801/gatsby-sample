@@ -166,7 +166,7 @@
 
 .popout__container__inner ul li p {
     font-family: 'Dancing Script', cursive;
-    font-size: 30px;
+    font-size: 60px;
     display: flex;
     align-items: center;
     width: auto;
@@ -205,6 +205,9 @@
 
 
 @media screen and (max-width: 1233px) {
+    .popout__container__inner ul li p {
+        font-size: 40px;
+    }
     .eachSVG__description__container {
         height: 200px;
         width: 200px;
