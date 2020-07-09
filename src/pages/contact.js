@@ -4,7 +4,7 @@ import { navigate } from 'gatsby-link'
 import SEO from "../components/seo"
 
 import '../styles/utils.css';
-import '../styles/Home.css';
+import '../styles/Contact.css';
 
 function encode(data) {
   return Object.keys(data)
@@ -42,11 +42,11 @@ const ContactPage = () => {
 
       <SEO title="Contact" />
 
-      <div className="row d-flex justify-content-center full-page-height">
+      <div className="contact row d-flex justify-content-center full-page-height">
 
 
-        <div className="col-md-12 d-flex justify-content-center text-center">
-          <h1 className="white d-flex align-items-center text-align-center">Say Hi!</h1>
+        <div className="col-md-12 d-flex justify-content-center">
+          <h2 className="white d-flex align-items-center text-align-center cursive">Say Hi!</h2>
         </div>
 
 
