@@ -137,6 +137,7 @@
     align-items: center;
     flex-direction: row;
     /* border: 1px solid red; */
+    margin-left: 20px;
     justify-content: flex-start;
     color: black;
     opacity: 0;

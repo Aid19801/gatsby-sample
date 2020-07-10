@@ -1,10 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Funk-27`,
+    description: `Welcome to the future! Funk-27 is a Front End Design and Software Delivery agency based in Farnham, Surrey.`,
+    author: `@funkTwentySeven`,
     titleTemplate: `F27`,
     initials: `F27`,
-    description: `Welcome to the future! Funk-27 is a Front End Design and Software Delivery agency based in the South East of England.`,
-    author: `@funkTwentySeven`,
+    keywords: "Web, Design, Aldershot, Farnham, London",
+    siteUrl: `https://funk27.com`,
     twitterUsername: `@funkTwentySeven`,
     url: `https://funk27.com`,
     hero_text_one: `We Live Tech.`,
