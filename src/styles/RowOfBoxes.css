@@ -123,7 +123,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
     /* border: 1px solid blue; */
     align-items: center;
@@ -136,7 +136,7 @@
     align-items: center;
     flex-direction: row;
     /* border: 1px solid red; */
-    /* justify-content: flex-start; */
+    justify-content: flex-start;
     color: black;
     opacity: 0;
     align-items: center;
@@ -165,14 +165,14 @@
 }
 
 .popout__container__inner ul li p {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Arial';
     font-size: 60px;
     display: flex;
     align-items: center;
     width: auto;
     margin-left: 20px;
     text-align: start;
-    color: black;
+    color: orange;
 }
 
 .popout__container__inner.active {
@@ -221,6 +221,8 @@
     }
 }
 
+
+
 @media screen and (max-width: 900px) {
     .popout__container__inner {
         width: 100%;
@@ -231,6 +233,11 @@
     }
     .popout__container__inner ul li {
         justify-content: flex-start;
+    }
+
+    .popout__container__inner ul li p {
+        font-size: 30px;
+        font-weight: bold;
     }
     .stackable_row_of_svgs {
         flex-direction: column;
