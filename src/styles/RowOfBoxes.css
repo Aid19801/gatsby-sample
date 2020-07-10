@@ -77,9 +77,9 @@
     margin-top: 500px;
     width: 70%;
     height: auto;
-    background-color: mintcream;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 25px;
-    border: 3px solid white;
+    border: 1px solid white;
     opacity: 0;
     display: flex;
     flex-direction: column;
@@ -103,7 +103,8 @@
 }
 
 .popout__container h4 {
-    color: #68A39E;
+    color: white;
+    font-family: monospace;
     line-height: 1.8;
     font-weight: 700;
     text-align: center;
@@ -165,14 +166,14 @@
 }
 
 .popout__container__inner ul li p {
-    font-family: 'Arial';
+    font-weight: 100;
     font-size: 60px;
     display: flex;
     align-items: center;
     width: auto;
     margin-left: 20px;
     text-align: start;
-    color: orange;
+    color: white;
 }
 
 .popout__container__inner.active {
@@ -226,6 +227,7 @@
 @media screen and (max-width: 900px) {
     .popout__container__inner {
         width: 100%;
+        max-height: 90vh;
         justify-content: start;
     }
     .popout__container__inner ul {
@@ -236,8 +238,8 @@
     }
 
     .popout__container__inner ul li p {
-        font-size: 30px;
-        font-weight: bold;
+        font-size: 150%;
+        /* font-weight: bold; */
     }
     .stackable_row_of_svgs {
         flex-direction: column;
