@@ -123,6 +123,20 @@
   margin: 0;
 }
 
+.graffiti__container {
+  border: 1px solid red;
+  height: 317px;
+  width: 100%;
+  contain: content;
+  display: flex;
+  align-items: center;
+}
+
+.graffiti__container img {
+  height: 350px;
+  width: 350px;
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;

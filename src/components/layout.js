@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
       </Helmet>
 
       <Header siteTitle={data.site.siteMetadata.initials} />
+
       <div
         style={{
           margin: `0 auto`,
@@ -54,3 +55,5 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+// <img src={require('../images/nebula.png')} style={{ width: '100%', height: 'auto' }} />

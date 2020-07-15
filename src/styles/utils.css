@@ -28,3 +28,7 @@ hr {
 .bg-black {
   background: black;
 }
+
+.pos-a {
+  position: absolute;
+}
