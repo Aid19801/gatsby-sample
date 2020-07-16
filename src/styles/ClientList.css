@@ -1,6 +1,7 @@
 .client-imgs-container {
   justify-content: space-around;
   flex-wrap: wrap;
+  opacity: 1;
 }
 .client-img {
   height: 120px;

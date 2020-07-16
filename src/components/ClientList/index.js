@@ -20,18 +20,24 @@ function ClientList({ ...props }) {
     }, [])
 
     useEffect(() => {
-        gsap.fromTo(divRef,
-            {
-                scrollTrigger: divRef,
-                y: 100,
-                opacity: 0
-            },
-            {
-            scrollTrigger: divRef, // start the animation when ".box" enters the viewport (once)
-            y: 0,
-            opacity: 1,
-            delay: .3,
-          });
+
+        var isSamsungBrowser = navigator.userAgent.match(/SamsungBrowser/i)
+        
+        if(!isSamsungBrowser) {
+            gsap.fromTo(divRef,
+                {
+                    scrollTrigger: divRef,
+                    y: 100,
+                    opacity: 0
+                },
+                {
+                scrollTrigger: divRef, // start the animation when ".box" enters the viewport (once)
+                y: 0,
+                opacity: 1,
+                delay: .3,
+              });
+        }
+
 
     }, [])
 
