@@ -38,24 +38,32 @@ const IndexPage = () => {
   }, []);
 
   useEffect(() => {
-    gsap.fromTo(ideasImageRef,
-      {
-        scrollTrigger: ideasImageRef,
-        opacity: 0
-      },
-      {
-        scrollTrigger: ideasImageRef,
-        opacity: 1,
-        delay: .6,
-        ease: Power3.easeIn,
-      });
 
+    var isSamsungBrowser = navigator.userAgent.match(/SamsungBrowser/i)
+
+    if (!isSamsungBrowser) {
+
+      gsap.fromTo(ideasImageRef,
+        {
+          scrollTrigger: ideasImageRef,
+          opacity: 0
+        },
+        {
+          scrollTrigger: ideasImageRef,
+          opacity: 1,
+          delay: .6,
+          ease: Power3.easeIn,
+        });
       gsap.fromTo(ideasTitleRef, .5,
-        { scrollTrigger: ideasTitleRef, y: 50 },
-        { scrollTrigger: ideasTitleRef, y: 0, delay: 1,
-          ease: Power3.easeIn, },
+        { scrollTrigger: ideasTitleRef, y: 70, opacity: 0 },
+        {
+          scrollTrigger: ideasTitleRef, y: 0, opacity: 1, delay: .7,
+          ease: Power3.easeIn,
+        },
+      )
+    }
 
-        )
+
 
   }, [])
 
