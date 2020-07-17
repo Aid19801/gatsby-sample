@@ -91,7 +91,7 @@ const IndexPage = () => {
           <div
             className="big-fade-img"
           >
-            <h1>Funk-27</h1>
+            <h2>Funk-27</h2>
           </div>
         </div>
 

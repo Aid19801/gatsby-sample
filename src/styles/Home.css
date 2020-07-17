@@ -56,6 +56,15 @@
   padding: 30px 80px;
   /* font-weight: bold; */
 }
+
+.big-fade-img h2 {
+  color: white;
+  font-family: monospace;
+  font-size: 69px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 80px;
+  /* font-weight: bold; */
+}
 .rocket-div {
   display: flex;
   justify-content: start;
